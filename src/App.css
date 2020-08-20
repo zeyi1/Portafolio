@@ -1,38 +1,72 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.appRoot{
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  min-height: 100vh;
 }
 
-.App-link {
-  color: #61dafb;
+
+#tsparticles{
+  width: 100%;
+  height: 100%;
+  margin-bottom: 150px;
+  position: absolute;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.timeline-container {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin: 40px 0;
+  width: 100%;
+}
+
+
+@media only screen and (max-width: 959px){
+  #root > div > div.experience > div > div:nth-child(2) > div[style]{
+    
+    background-image:linear-gradient(to top left, rgba(0,0,0,0.3) 0%,rgba(0,0,0,0.5) 100%),url('./images/geisel-library.jpg') !important;
   }
-  to {
-    transform: rotate(360deg);
-  }
+
+
+}
+
+.experience {
+  padding-top: 35px;
+}
+
+.contact {
+  padding-top: 100px;
+  position: absolute;
+  width: 100%;
+}
+
+
+.something{
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  background-color: skyblue;
+}
+
+
+#contact::after{
+  content: "";
+  background: linear-gradient(to bottom, 
+                            rgba(0,0,0,0.9) 0%, 
+                            rgba(0,36,36,0.65) 30%, 
+                            rgba(11,64,56,0.75) 50%, 
+                            rgba(0,88,89,0.6) 70%, 
+                            rgba(255,255,255,0.9) 100%), 
+                            url('./images/workstation.jpg');
+  mix-blend-mode: difference;
+  background-size: cover;
+  background-position-x: center;
+  background-repeat: no-repeat;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: absolute;
+  z-index: -1;
+  height: 100%;
 }
