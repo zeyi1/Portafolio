@@ -35,11 +35,12 @@ const useStyles = makeStyles(theme => ({
         backgroundPosition: 'center center',
         backgroundAttachment: 'fixed',
         backgroundRepeat: 'no-repeat',
+        margin: 'auto'
     },
 
-    paper:{
-        maxWidth: '100%',
-    },
+    // paper:{
+    //     maxWidth: '100vw',
+    // },
 
     text:{
         color: '#F8F0C6',
@@ -72,7 +73,6 @@ const useStyles = makeStyles(theme => ({
     icon:{
         width: theme.spacing(5),
         height: theme.spacing(5),
-        
     },
 
     icongrid:{
@@ -85,8 +85,6 @@ const useStyles = makeStyles(theme => ({
 
 
 const TimelineItem = ({dataItem}) => {
-    
-
     useEffect(() => {
         Aos.init({
             duration: 2000,
@@ -98,9 +96,9 @@ const TimelineItem = ({dataItem}) => {
 
     return (
     
-    <Paper className={classes.paper}>
+    <Paper style={{overflowX: 'hidden'}}>
         <Grid container spacing={3} className={classes.outerGrid} 
-              style={{backgroundImage: `linear-gradient(to top left, rgba(0,0,0,0.3) 0%,rgba(0,0,0,0.5) 100%), url(${dataItem.image})`, width:'100%', margin:0}}
+              style={{backgroundImage: `linear-gradient(to top left, rgba(0,0,0,0.3) 0%,rgba(0,0,0,0.5) 100%), url(${dataItem.image})`, width:'100%', margin:0, height:'100%'}}
               data-aos='fade-up'>
             <Grid item container md={12} lg={4} justify='center' align='center' className={classes.date}
                   data-aos='fade-left'>
@@ -151,7 +149,7 @@ const TimelineItem = ({dataItem}) => {
                     <br />
                     <Grid item container justify='center'>
                         {dataItem.icons.map(item => (
-                            <Grid item className={classes.icongrid} key={item[1]} sm={1}>
+                            <Grid item className={classes.icongrid} key={item[1]} sm={1} >
                                 <Avatar className={classes.icon} src={item[0]} alt={item[1]} variant='rounded'/>
                             </Grid>
                         ))}

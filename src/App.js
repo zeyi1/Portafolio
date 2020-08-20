@@ -12,13 +12,13 @@ function App() {
     <div className='appRoot'>
       {/* <CssBaseline/> */}
 
-      <NavigationBar />
-      <Header />
+      {/* <NavigationBar />
+      <Header /> */}
 
       <Timeline /> 
-      <Projects />
+      {/* <Projects />
       <Contact />
-      <Footer />
+      <Footer /> */}
     </div>
   );
 }
