@@ -3,7 +3,6 @@ import ReactDOM from 'react-dom';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 import { CssBaseline } from '@material-ui/core';
-import WebfontLoader from '@dr-kobros/react-webfont-loader';
 
 ReactDOM.render(
   <React.StrictMode>

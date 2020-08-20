@@ -3,34 +3,18 @@ import React from 'react';
 import {makeStyles, withStyles} from '@material-ui/core/styles';
 import {Box, Button, Grid, InputAdornment, TextField, Typography} from '@material-ui/core';
 import {ChatBubble, Create, Email, Person, Telegram} from '@material-ui/icons';
-import Footer from './Footer';
-import workstation from '../images/workstation.jpg';
+
 
 const useStyles = makeStyles(theme => ({
     root:{
-        // minHeight: '100vh',
         position: 'relative',
         paddingTop: '35px',
-            
     },
-    // backImage:{
-    //     height: '100vh',
-    //     width: '100vw',
-    //     backgroundImage: `linear-gradient(to top left, rgba(255,255,255,0.1) 0%,rgba(255,255,255,0.2) 100%), url(${workstation})`,
-    //     backgroundSize: 'cover',
-    //     MozBackgroundSize: 'cover',
-    //     WebkitBackgroundSize: 'cover',
-    //     OBackgroundSize: 'cover',
-    //     // justifyContent: 'contain',
-    //     backgroundPosition: 'center',
-    //     backgroundRepeat: 'no-repeat',
-    //     filter: 'blur(8px)'  
-    // },
+
     title:{
         textAlign: 'center',
         fontSize: '2em',
         paddingBottom: '1em',
-        
     },
 
     field: {
@@ -143,7 +127,6 @@ const Contact = () => {
                         margin='dense'
                         placeholder='Type Your Message...'
                         rowsMax='10'
-                        // rows='5'
                         variant='outlined'  
                         size='medium'
                     />

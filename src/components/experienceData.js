@@ -1,4 +1,3 @@
-import React from 'react';
 import mtsac from '../images/MSAC_Seal.png';
 import mtsacBackground from '../images/mtsac-upperwalkway.jpg';
 import warren from '../images/warren-logo.png';

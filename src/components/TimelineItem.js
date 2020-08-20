@@ -1,5 +1,5 @@
 import React, {useEffect} from 'react';
-import {Avatar, Box, Divider, Grid, Typography, Paper} from '@material-ui/core';
+import {Avatar, Grid, Typography, Paper} from '@material-ui/core';
 import {makeStyles} from '@material-ui/core/styles';
 import { LocationOn } from '@material-ui/icons';
 import Aos from 'aos';
@@ -17,7 +17,6 @@ const useStyles = makeStyles(theme => ({
         border: '1px solid black',
         backgroundImage: 'radial-gradient(rgba(255,236,158,0.7), rgba(255,221,138,0.7), rgba(225,173,109,0.7), rgba(201,145,87,0.7), rgba(210,170,119,0.7))',
         maxWidth: '283px',
-        // minWidth: '283px',
         minHeight: '75px',
     },
 
@@ -30,20 +29,19 @@ const useStyles = makeStyles(theme => ({
         justifyContent: 'center',
         alignItems: 'center',
         backgroundSize: 'cover',
+        MozBackgroundSize: 'cover',
+        WebkitBackgroundSize: 'cover',
+        OBackgroundSize: 'cover',
         backgroundPosition: 'center center',
         backgroundAttachment: 'fixed',
         backgroundRepeat: 'no-repeat',
     },
 
     paper:{
-        margin: '0.862em 0',
-        [theme.breakpoints.down('sm')]:{
-            margin: 0
-        }
+        maxWidth: '100%',
     },
 
     text:{
-        // color: '#e5dbde'
         color: '#F8F0C6',
     },
 
@@ -53,9 +51,6 @@ const useStyles = makeStyles(theme => ({
 
     text2:{
         color: '#fadadd',
-        // color: '#c2a5ae',
-        // color:'#d4caa3',
-        //color: '#e5dbde',
         backgroundColor: 'rgba(0,0,0,0.5)',
         marginLeft: '8px',
         marginTop: '-8px',
@@ -85,10 +80,6 @@ const useStyles = makeStyles(theme => ({
             padding: '10px 10px'
         }
     },
-    paper:{
-        maxWidth: '100%'
-    }
-    
 
 }));
 
@@ -160,7 +151,6 @@ const TimelineItem = ({dataItem}) => {
                     <br />
                     <Grid item container justify='center'>
                         {dataItem.icons.map(item => (
-                            // console.log(item[0], item[1], item[2])
                             <Grid item className={classes.icongrid} key={item[1]} sm={1}>
                                 <Avatar className={classes.icon} src={item[0]} alt={item[1]} variant='rounded'/>
                             </Grid>

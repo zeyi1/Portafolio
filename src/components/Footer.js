@@ -1,9 +1,9 @@
 import React from 'react';
 
-import {Avatar, Box, Divider, Grid, Typography, Table, TableHead, TableRow, TableCell, TableBody} from '@material-ui/core';
+import {Avatar, Box, Divider, Grid, Typography} from '@material-ui/core';
 import {makeStyles} from '@material-ui/core/styles';
 import {Facebook, GitHub, Instagram, LinkedIn, Mail} from '@material-ui/icons';
-import { CssBaseline } from '@material-ui/core';
+
 
 const useStyles = makeStyles(theme =>({
 
@@ -14,13 +14,10 @@ const useStyles = makeStyles(theme =>({
         textAlign: 'center',
         position: 'relative',
         background: 'linear-gradient(to top left, rgba(0,0,0,0.2) 0%,rgba(0,0,0,0.9) 100%)'
-        
     },
-
     socials:{
         alignItems: 'center',
         justifyContent: 'center',
-        // backgroundColor: 'black'
     },
     Facebook: {
         backgroundColor: '#4267B2',
@@ -41,7 +38,6 @@ const useStyles = makeStyles(theme =>({
             transition: '0.5s'
         },
         margin: '2em 0.75em'
-
     },
     LinkedIn: {
         backgroundColor: '#0E76A8',
@@ -52,7 +48,6 @@ const useStyles = makeStyles(theme =>({
             transition: '0.5s'
         },
         margin: '2em 0.75em'
-
     },
     GitHub: {
         backgroundColor: '#211F1F',
@@ -71,15 +66,12 @@ const useStyles = makeStyles(theme =>({
             cursor: 'pointer',
             opacity: '0.8',
             boxShadow: '0 0 10px #E2E2E2, 0 0 20px #D44638, 0 0 30px  #B23121',
-            // boxShadow: '0 0 10px #C6C6C6, 0 0 20px #DADADA, 0 0 30px #E2E2E2',
             transition: '0.5s'
         },
         margin: '2em 0.75em'
-        
     },
     bottom: {
         margin: '1em 0px 3em 0px',
-        // fontSize: '3.5ex'
     }
 }))
 
@@ -88,21 +80,6 @@ const Footer = () => {
     const classes = useStyles();
 
     const data = [
-        {
-            tag: 'Address',
-            value: '1234 Somewhere Road | Los Angeles, CA 56789 | USA'
-        },
-        {
-            tag: 'Phone',
-            value: '(909) 994-9015'
-        },
-        {
-            tag: 'Email',
-            value: 'zeyihong@gmail.com'
-        }
-    ];
-
-    const data2 = [
         {
             tag: 'Mail',
             icon: <Mail/>,
@@ -131,22 +108,19 @@ const Footer = () => {
     ]
 
     return (
-        // <div className={classes.footer}>
-            <Box variant='div' className={classes.root}>
+        <Box variant='div' className={classes.root}>
+            <Grid container spacing={1} className={classes.socials} style={{width:'100%', margin:0}}>
+                {data.map(item =>(
+                    <Avatar className={classes[item.tag]} onClick={event => window.open(item.url, '_blank')}>
+                        {item.icon}
+                    </Avatar>
+                ))}
+            </Grid>
 
-                <Grid container spacing={1} className={classes.socials} style={{width:'100%', margin:0}}>
-                    {/* <Avatar className={classes.Email} onClick={event => window.location.href(emailData.url)}>{emailData.icon}</Avatar> */}
-                    {data2.map(item =>(
-                        <Avatar className={classes[item.tag]} onClick={event => window.open(item.url, '_blank')}>
-                            {item.icon}
-                        </Avatar>
-                    ))}
-                </Grid>
+            <Divider/>
+            <Typography className={classes.bottom} style={{fontFamily:"'Tangerine', cursive"}}>&copy; {new Date().getFullYear()} Zeyi Hong Chen</Typography>
+        </Box>
 
-                <Divider/>
-                <Typography className={classes.bottom} style={{fontFamily:"'Tangerine', cursive"}}>&copy; {new Date().getFullYear()} Zeyi Hong Chen</Typography>
-            </Box>
-        // </div>
     );
 };
 

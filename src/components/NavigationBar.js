@@ -7,9 +7,8 @@ import useMediaQuery from '@material-ui/core/useMediaQuery';
 import {Link} from 'react-scroll';
 import avatar from '../images/avatar.png';
 import {AppBar, Button, Toolbar, ListItem, IconButton, ListItemText, Avatar, Divider, List, Typography, Box, ListItemIcon} from '@material-ui/core';
-import {Home, AssignmentInd, Apps, ContactMail, SportsRugbySharp} from '@material-ui/icons';
+import {Home, AssignmentInd, Apps, ContactMail} from '@material-ui/icons';
 import MobilRightMenuSlider from '@material-ui/core/Drawer';
-import Typed from 'react-typed';
 import {useScrollPosition} from '@n8tb1t/use-scroll-position';
 
 
@@ -34,7 +33,7 @@ const useStyles = makeStyles(theme => ({
         '&:hover': {
             backgroundColor: '#abcbfe'
         }
-        // rgba(171,203,254,0.7)
+
     }
 
   }));
