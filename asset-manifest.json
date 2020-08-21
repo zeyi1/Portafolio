@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/Portafolio/static/css/main.2cd405c9.chunk.css",
-    "main.js": "/Portafolio/static/js/main.dacc8108.chunk.js",
-    "main.js.map": "/Portafolio/static/js/main.dacc8108.chunk.js.map",
+    "main.css": "/Portafolio/static/css/main.a1c658cf.chunk.css",
+    "main.js": "/Portafolio/static/js/main.d6771832.chunk.js",
+    "main.js.map": "/Portafolio/static/js/main.d6771832.chunk.js.map",
     "runtime-main.js": "/Portafolio/static/js/runtime-main.c0423103.js",
     "runtime-main.js.map": "/Portafolio/static/js/runtime-main.c0423103.js.map",
     "static/css/2.eb43dee1.chunk.css": "/Portafolio/static/css/2.eb43dee1.chunk.css",
-    "static/js/2.1aa91984.chunk.js": "/Portafolio/static/js/2.1aa91984.chunk.js",
-    "static/js/2.1aa91984.chunk.js.map": "/Portafolio/static/js/2.1aa91984.chunk.js.map",
+    "static/js/2.57daa23b.chunk.js": "/Portafolio/static/js/2.57daa23b.chunk.js",
+    "static/js/2.57daa23b.chunk.js.map": "/Portafolio/static/js/2.57daa23b.chunk.js.map",
     "index.html": "/Portafolio/index.html",
-    "precache-manifest.5c9e528839d458e6c78353bb60c098b8.js": "/Portafolio/precache-manifest.5c9e528839d458e6c78353bb60c098b8.js",
+    "precache-manifest.8c0c56133c86c116eb807c076ba173de.js": "/Portafolio/precache-manifest.8c0c56133c86c116eb807c076ba173de.js",
     "service-worker.js": "/Portafolio/service-worker.js",
     "static/css/2.eb43dee1.chunk.css.map": "/Portafolio/static/css/2.eb43dee1.chunk.css.map",
-    "static/css/main.2cd405c9.chunk.css.map": "/Portafolio/static/css/main.2cd405c9.chunk.css.map",
-    "static/js/2.1aa91984.chunk.js.LICENSE.txt": "/Portafolio/static/js/2.1aa91984.chunk.js.LICENSE.txt",
+    "static/css/main.a1c658cf.chunk.css.map": "/Portafolio/static/css/main.a1c658cf.chunk.css.map",
+    "static/js/2.57daa23b.chunk.js.LICENSE.txt": "/Portafolio/static/js/2.57daa23b.chunk.js.LICENSE.txt",
     "static/media/Isla.png": "/Portafolio/static/media/Isla.5e0698de.png",
     "static/media/MSAC_Seal.png": "/Portafolio/static/media/MSAC_Seal.4c669efb.png",
     "static/media/UCSD-Seal.png": "/Portafolio/static/media/UCSD-Seal.70e12fb7.png",
@@ -23,7 +23,7 @@
     "static/media/dinnerware.jpg": "/Portafolio/static/media/dinnerware.61cc4895.jpg",
     "static/media/eclipse.png": "/Portafolio/static/media/eclipse.2705f649.png",
     "static/media/excel.png": "/Portafolio/static/media/excel.d21d9919.png",
-    "static/media/App.css": "/Portafolio/static/media/geisel-library.489bd564.jpg",
+    "static/media/App.css": "/Portafolio/static/media/workstation.df3dd19d.jpg",
     "static/media/haskell.png": "/Portafolio/static/media/haskell.dd03d077.png",
     "static/media/java.png": "/Portafolio/static/media/java.d4275e24.png",
     "static/media/jupyter.png": "/Portafolio/static/media/jupyter.411385ce.png",
@@ -40,14 +40,13 @@
     "static/media/ucsd-scenery.png": "/Portafolio/static/media/ucsd-scenery.8529c1cf.png",
     "static/media/visualstudio.png": "/Portafolio/static/media/visualstudio.e2436725.png",
     "static/media/warren-logo.png": "/Portafolio/static/media/warren-logo.a524331a.png",
-    "static/media/workstation.jpg": "/Portafolio/static/media/workstation.df3dd19d.jpg",
     "static/media/xcodeicon.png": "/Portafolio/static/media/xcodeicon.aeb34dbe.png"
   },
   "entrypoints": [
     "static/js/runtime-main.c0423103.js",
     "static/css/2.eb43dee1.chunk.css",
-    "static/js/2.1aa91984.chunk.js",
-    "static/css/main.2cd405c9.chunk.css",
-    "static/js/main.dacc8108.chunk.js"
+    "static/js/2.57daa23b.chunk.js",
+    "static/css/main.a1c658cf.chunk.css",
+    "static/js/main.d6771832.chunk.js"
   ]
 }
