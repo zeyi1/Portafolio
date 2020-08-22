@@ -1,7 +1,8 @@
-import React, {useEffect} from 'react';
+import React, {useEffect, Suspense, lazy} from 'react';
 import {Avatar, Grid, Typography, Paper} from '@material-ui/core';
 import {makeStyles} from '@material-ui/core/styles';
 import { LocationOn } from '@material-ui/icons';
+// const Aos = lazy(() => import('aos'))
 import Aos from 'aos';
 import 'aos/dist/aos.css';
 
@@ -28,14 +29,15 @@ const useStyles = makeStyles(theme => ({
     outerGrid: {
         justifyContent: 'center',
         alignItems: 'center',
-        backgroundSize: 'cover',
-        MozBackgroundSize: 'cover',
-        WebkitBackgroundSize: 'cover',
-        OBackgroundSize: 'cover',
-        backgroundPosition: 'center center',
-        backgroundAttachment: 'fixed',
-        backgroundRepeat: 'no-repeat',
-        margin: 'auto'
+        // MozBackgroundSize: 'cover',
+        // WebkitBackgroundSize: 'cover',
+        // OBackgroundSize: 'cover',
+        // backgroundSize: 'cover',
+        // backgroundPosition: 'center center',
+        // backgroundAttachment: 'fixed',
+        // backgroundRepeat: 'no-repeat',
+        // height: '100%',
+        // overflow: 'hidden'
     },
 
     // paper:{
@@ -96,9 +98,16 @@ const TimelineItem = ({dataItem}) => {
 
     return (
     
-    <Paper style={{overflowX: 'hidden'}}>
+    <Paper style={{overflowX: 'hidden', overflowY: 'hidden'}}>
         <Grid container spacing={3} className={classes.outerGrid} 
-              style={{backgroundImage: `linear-gradient(to top left, rgba(0,0,0,0.3) 0%,rgba(0,0,0,0.5) 100%), url(${dataItem.image})`, width:'100%', margin:0, height:'100%'}}
+              style={{background: `linear-gradient(to top left, rgba(0,0,0,0.3) 0%,rgba(0,0,0,0.5) 100%), url(${dataItem.image}) no-repeat center center fixed`, 
+                      backgroundSize: 'cover',
+                      WebkitBackgroundSize: 'cover',
+                      MozBackgroundSize: 'cover',
+                      OBackgroundSize: 'cover',
+                      width:'100%', 
+                      height: '100%',
+                      margin:0}}
               data-aos='fade-up'>
             <Grid item container md={12} lg={4} justify='center' align='center' className={classes.date}
                   data-aos='fade-left'>

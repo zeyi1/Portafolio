@@ -1,12 +1,14 @@
-import React, {useState} from 'react';
+import React, {useState, lazy, Suspense} from 'react';
 import '../App.css';
 import {Typography, Avatar, Grid, Box, Button} from '@material-ui/core';
 import avatar from '../images/avatar.png';
-import Typed from 'react-typed';
+// import Typed from 'react-typed';
 import {makeStyles} from '@material-ui/core/styles';
-import isla from '../images/Isla.png';
-import Particle from './Particle';
+import isla from '../images/Isla.jpg';
+// import Particle from './Particle';
 
+const Particle = lazy(() => import('./Particle'))
+const Typed = lazy(() => import('react-typed'))
 
 const useStyles = makeStyles( theme => ({
     avatar: {
@@ -55,8 +57,6 @@ const useStyles = makeStyles( theme => ({
         width: '100%',
         height: '100vh',
         backgroundPosition: 'center',
-        
-        justifyContent: 'contain',
         MozBackgroundSize: 'cover',
         WebkitBackgroundSize: 'cover',
         OBackgroundSize: 'cover',
@@ -97,52 +97,33 @@ const Header = () => {
                     <Grid container xs={12} justify='center' style={{paddingBottom: '40px'}}>
                         <Avatar className={classes.avatar} src = {avatar} alt='Sharingan One Tomoe'/>
                     </Grid>
-                    <Grid container xs={12}direction='column' className={classes.test}>
-                        <Typography className={classes.title} style={{fontFamily: "'Kaushan Script', cursive"}}>
 
-                            <Typed strings={[title]} typeSpeed={40} startDelay={1000} showCursor={false}/>
-                        </Typography>
-                        
-                        {text.map(item => (
-                            <Grid item>
-                                <Typography className={classes.subtitle} style={{fontFamily:"'Harmattan', sans-serif"}}>
-                                    <Typed strings={[item[0]]} typeSpeed={30} startDelay={item[1]} showCursor={false}/>
-                                </Typography>
-                            </Grid>
-                        ))}
-                    </Grid> 
-                </Box>
-                <Grid container justify='center' className={classes.buttongrid}>
-                    <Button className={classes.button} style={{fontFamily: "'Caveat', cursive"}} onClick={() => setAnimation(!animation)}>Animate</Button>
-                    {animation ? <Particle /> : <></>}
-                </Grid>
-            </Box>
+                    <Suspense fallback={<div />}>
+                        <Grid container xs={12}direction='column' className={classes.test}>
+                            <Typography className={classes.title} style={{fontFamily: "'Kaushan Script', cursive"}}>
 
-            {/* <Box className={classes.backImage} id='about'>
-                <Box className={classes.typedContainer}>
-                    <Grid container justify='center'>
-                        <Avatar className={classes.avatar} src = {avatar} alt='Sharingan One Tomoe'/>
-                    </Grid>
+                                <Typed strings={[title]} typeSpeed={40} startDelay={1000} showCursor={false}/>
+                            </Typography>
+                            
+                            {text.map(item => (
+                                <Grid item>
+                                    <Typography className={classes.subtitle} style={{fontFamily:"'Harmattan', sans-serif"}}>
+                                        <Typed strings={[item[0]]} typeSpeed={30} startDelay={item[1]} showCursor={false}/>
+                                    </Typography>
+                                </Grid>
+                            ))}
+                        </Grid> 
+                    </Suspense>
                     
-                    <Typography className={classes.title} variant='h4'>
-                        <Typed strings={['Zeyi Hong Chen']} typeSpeed={40} />
-                    </Typography>
-
-                    <br />
-
-                    <Typography className={classes.subtitle} variant='h5'>
-                        <Typed strings={['Web Development', 'Web Design', 'MERN Stack']}
-                        typeSpeed={40}
-                        backSpeed={40}
-                        loop/>
-                    </Typography>
-
-                    <Button className={classes.button} fullWidth={true} onClick={() => setAnimation(!animation)}>Toggle Animation</Button>
                 </Box>
+                <Suspense fallback={<div />}>
+                    <Grid container justify='center'>
+                        <Button className={classes.button} style={{fontFamily: "'Caveat', cursive"}} onClick={() => setAnimation(!animation)}>Animate</Button>
+                        {animation ? <Particle /> : <></>}
+                    </Grid>
+                </Suspense>
                 
-                {animation ? <Particle /> : <></>}
-                
-            </Box> */}
+            </Box>
 
         </>
     );

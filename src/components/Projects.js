@@ -38,10 +38,13 @@ const Projects = () => {
                 </Typography>
 
                 <Grid container spacing={10} className={classes.outergrid} >
-
+                    
                     {projectData.map(data => (
-                        <ProjectInfo dataItem={data} key={data.title}/>
+                        <Grid item sm={12} md={6} lg={4} className={classes.container} >
+                            <ProjectInfo dataItem={data} key={data.title}/>
+                        </Grid>
                     ))}
+                    
                 </Grid>
             </div>
             

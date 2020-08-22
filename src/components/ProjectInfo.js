@@ -5,18 +5,36 @@ import { Box, Card, CardActions, CardActionArea, CardMedia, CardContent, Typogra
 
 const useStyles = makeStyles(theme => ({
     container:{
-        maxWidth: '600px',
+        // maxWidth: '600px',
         justify: 'center',
-        border: '2px solid red'
+        border: '2px solid red',
+        // margin: 'auto'
     },
     card: {
-        maxWidth: '100%',
+        // maxWidth: '100%',
+        border: '2px solid red',
     },
     
     cardActions:{
         display: 'flex',
-        margin: '0 10px',
-        justifyContent: "space-between"
+        // margin: '0 auto',
+        // justifyContent: "space-between"
+    },
+    icongrid:{
+        margin: '10px 1rem',
+        // [theme.breakpoints.down('sm')]:{
+        //     padding: '10px 10px'
+        // },
+        // margin: '0 auto'
+    },
+    icon:{
+        width: theme.spacing(5),
+        height: theme.spacing(5),
+
+    },
+
+    grid:{
+        
     }
 }))
 
@@ -25,34 +43,41 @@ const ProjectInfo = ({dataItem}) => {
 
     return(
 
-        <Grid item xs={12} xl={6} className={classes.container} >
-            <Card className={classes.card}>
-                <CardActionArea>
-                    <CardMedia component='img'
-                        alt={dataItem.imgAlt}
-                        height='240'
-                        image={dataItem.image}
-                        title={dataItem.imgAlt}
-                        />
-                        <CardContent>
-                        <Typography gutterBottom variant="h5" component="h2">
-                            {dataItem.title}
-                        </Typography>
-                        <Typography variant="body2" color="textSecondary" component="p">
-                            {dataItem.description}
-                        </Typography>
-                        </CardContent>
-                </CardActionArea>
+        <Card className={classes.card}>
+            <CardActionArea>
+                <CardMedia component='img'
+                    alt={dataItem.imgAlt}
+                    height='240'
+                    image={dataItem.image}
+                    title={dataItem.imgAlt}
+                    />
+                    <CardContent>
+                    <Typography gutterBottom variant="h5" component="h2" style={{fontFamily:"'Special Elite', cursive", textAlign:'center'}}>
+                        {dataItem.title}
+                    </Typography>
+                    {dataItem.description.map(item => (
+                        <Typography variant="body2" color="textSecondary" component="p" style={{fontFamily:"'Harmattan', sans-serif", fontSize:'1.5em'}}>
+                            {item}
+                         </Typography>
 
-                <CardActions className={classes.cardActions}>
-                    {dataItem.skills.map(item =>(
-                        <Box>
-                            <Avatar src={item[0]} alt={item[1]} variant='rounded'/>
-                        </Box>
-                    ))}  
-                </CardActions>
-            </Card>
-        </Grid>
+                    ))}
+                    
+                    </CardContent>
+            </CardActionArea>
+
+            {/* <CardActions className={classes.cardActions}> */}
+
+                <Grid container justify='center' className={classes.grid} style={{background:'black'}}>      
+                    {dataItem.skills.map(item => (
+                        <Grid item  className={classes.icongrid} key={item[1]} sm={1} >
+                            <Avatar className={classes.icon} src={item[0]} alt={item[1]} variant='rounded'/>
+                        </Grid>
+                    ))}
+                </Grid>
+            {/* </CardActions> */}
+
+        </Card>
+
 
     )
 }

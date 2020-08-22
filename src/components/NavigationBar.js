@@ -41,8 +41,8 @@ const useStyles = makeStyles(theme => ({
 const useStylesMobile = makeStyles(theme => ({
     menuSlider: {
 
-        background: "#511",
-        height: 450,
+        background: 'linear-gradient(to top left, rgba(0,90,167,0.6) 0%, rgba(255,253,228,0.7) 100%)',
+        // height: '70vh',
         witdh: '100%'
         
     },
@@ -54,12 +54,16 @@ const useStylesMobile = makeStyles(theme => ({
 
     },
     listItem: {
-        color: 'tan',
-        alignItems: 'center',
-        justifyContent: 'center',
-        flex: 1,
-        marginRight: -115,
+        minWidth:'40%',
+        color: '#6b0015',
+        justifyContent: 'flex-end',
+        // flex: 1,
 
+    },
+    listItem2:{
+        width: '50%',
+        textAlign: 'left',
+        paddingLeft: '20px'
     }
 
 }))
@@ -152,7 +156,7 @@ function NavigationBar() {
                     
                     <ListItem button style={{fontFamily: "'Caveat', cursive"}}>
                         <ListItemIcon className={classesMobile.listItem}>{item.icon}</ListItemIcon>
-                        <ListItemText disableTypography className={classesMobile.listItem} 
+                        <ListItemText disableTypography className={classesMobile.listItem2} 
                             primary={<Typography variant='h6' style={{fontFamily: "'Caveat', cursive"}}>{item.title}</Typography>}/>
                     </ListItem>
 

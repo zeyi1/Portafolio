@@ -2,7 +2,7 @@ import mtsac from '../images/MSAC_Seal.png';
 import mtsacBackground from '../images/mtsac-upperwalkway.jpg';
 import warren from '../images/warren-logo.png';
 import ucsd from '../images/UCSD-Seal.png';
-import ucsdBackground from '../images/ucsd-scenery.png';
+import ucsdBackground from '../images/ucsd-scenery.jpg';
 import tuxton from '../images/tuxton.png';
 import dinnerware from '../images/dinnerware.jpg';
 import api from '../images/api.png';
