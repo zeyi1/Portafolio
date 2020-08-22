@@ -22,12 +22,13 @@
 
 
 @media only screen and (max-width: 959px){
-  #root > div > div.experience > div > div:nth-child(2) > div[style]{
+  #root > div > div.experience > div:nth-child(3) > div{
     
-    background-image:linear-gradient(to top left, rgba(0,0,0,0.3) 0%,rgba(0,0,0,0.5) 100%),url('./images/geisel-library.jpg') !important;
+    background:linear-gradient(to top left, rgba(0,0,0,0.3) 0%,rgba(0,0,0,0.5) 100%), url('./images/geisel-library.jpg') no-repeat center center fixed !important;
+    background-size: cover !important;
+    height: 100% !important;
+    overflow: hidden !important;
   }
-
-
 }
 
 .experience {

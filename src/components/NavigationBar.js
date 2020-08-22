@@ -12,6 +12,33 @@ import MobilRightMenuSlider from '@material-ui/core/Drawer';
 import {useScrollPosition} from '@n8tb1t/use-scroll-position';
 
 
+const navItems = [
+    {
+        id: '1',
+        title: 'About',
+        linkName: 'about',
+        icon: <Home />
+    },
+    {
+        id: '2',
+        title: 'Experience',
+        linkName: 'experience',
+        icon: <AssignmentInd />
+    },
+    {
+        id: '3',
+        title: 'Portafolio',
+        linkName: 'projects',
+        icon: <Apps />
+    },
+    {
+        id: '4',
+        title: 'Contact',
+        linkName: 'contact',
+        icon: <ContactMail />
+    }
+]
+
 const useStyles = makeStyles(theme => ({
     bar:{
         backgroundColor: 'transparent',
@@ -100,43 +127,17 @@ function NavigationBar() {
         setState({...state, [slider]: open})
     }
 
-    
+
+
     const classes = useStyles();
     const classesMobile = useStylesMobile();
 
     const theme = useTheme();
     const isMobile = useMediaQuery(theme.breakpoints.down('xs'));
 
-    const navItems = [
-        {
-            id: '1',
-            title: 'About',
-            linkName: 'about',
-            icon: <Home />
-        },
-        {
-            id: '2',
-            title: 'Experience',
-            linkName: 'experience',
-            icon: <AssignmentInd />
-        },
-        {
-            id: '3',
-            title: 'Portafolio',
-            linkName: 'projects',
-            icon: <Apps />
-        },
-        {
-            id: '4',
-            title: 'Contact',
-            linkName: 'contact',
-            icon: <ContactMail />
-        }
-    ]
-
-    
 
     const sideList = slider => (
+
         <Box className={classesMobile.menuSlider} component='div' onClick={toggleSlider(slider, false)}>
             <Avatar className={classesMobile.avatar} src={avatar} alt="Sharingan One Tomoe" />
             <Divider />
@@ -149,7 +150,7 @@ function NavigationBar() {
                     spy={true}
                     smooth={'easeOutQuart'}
                     hashSpy={true}
-                    duration={1500}
+                    duration={2000}
                     isDynamic={true}
                     ignoreCancelEvents={false}
                     onClick={toggleSlider(slider, false)}>
@@ -177,12 +178,14 @@ function NavigationBar() {
                     className={classes.menuButton} 
                     aria-label="menu"
                     onClick={toggleSlider('right', true)}>
+
                     <MenuIcon style={{color:'#2C68C6'}}/>
                 </IconButton>
 
                 <MobilRightMenuSlider anchor='bottom' open={state.right} onClose={toggleSlider('right', false)}>
                     {sideList('right')}
                 </MobilRightMenuSlider>
+                
                 </>
             ) :
             (   
@@ -196,7 +199,7 @@ function NavigationBar() {
                             spy={true}
                             smooth={'easeOutQuart'}
                             hashSpy={true}
-                            duration={1500}
+                            duration={2000}
                             isDynamic={true}
                             ignoreCancelEvents={false}>
                             <Button className={classes.buttons} style={{fontFamily: "'Caveat', cursive"}}>

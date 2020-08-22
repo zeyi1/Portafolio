@@ -5,6 +5,28 @@ import {Box, Button, Grid, InputAdornment, TextField, Typography} from '@materia
 import {ChatBubble, Create, Email, Person, Telegram} from '@material-ui/icons';
 
 
+const data = [
+    {
+        text: 'Enter Your Name...',
+        icon: <Person />,
+        label: 'Name',
+        id: '1'
+    },
+    {
+        text: 'Enter Your email...',
+        icon: <Email />,
+        label: 'Email',
+        id: '2'
+    },
+    {
+        text: 'Specify The Subject...',
+        icon: <Create />,
+        label: 'Subject',
+        id: '3'
+    },
+]
+
+
 const useStyles = makeStyles(theme => ({
     root:{
         position: 'relative',
@@ -68,27 +90,6 @@ const InputField = withStyles({
 
 const Contact = () => {
 
-    const data = [
-        {
-            text: 'Enter Your Name...',
-            icon: <Person />,
-            label: 'Name',
-            id: '1'
-        },
-        {
-            text: 'Enter Your email...',
-            icon: <Email />,
-            label: 'Email',
-            id: '2'
-        },
-        {
-            text: 'Specify The Subject...',
-            icon: <Create />,
-            label: 'Subject',
-            id: '3'
-        },
-    ]
-
     const classes = useStyles();
 
     return (
@@ -100,21 +101,21 @@ const Contact = () => {
                         Hire or Contact Me...
                     </Typography>
                     {data.map(item => (
-                        <>
-                        <InputField key={item.id} className={classes.field}
-                            InputProps={{
-                                startAdornment: <InputAdornment position='start'>{item.icon}</InputAdornment>, 
-                                }}
-                            fullWidth={true} 
-                            label={item.label} 
-                            margin='dense'
-                            placeholder={item.text}
-                            required={true}
-                            variant='outlined'  
-                            size='medium' 
-                            />
-                        <br />
-                        </>
+                        <div key={item.id}>
+                            <InputField className={classes.field}
+                                InputProps={{
+                                    startAdornment: <InputAdornment position='start'>{item.icon}</InputAdornment>, 
+                                    }}
+                                fullWidth={true} 
+                                label={item.label} 
+                                margin='dense'
+                                placeholder={item.text}
+                                required={true}
+                                variant='outlined'  
+                                size='medium' 
+                                />
+                            <br />
+                        </div>
                     ))}
 
                     <InputField multiline={true} className={classes.field}

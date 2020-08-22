@@ -56,7 +56,7 @@ const ProjectInfo = ({dataItem}) => {
                         {dataItem.title}
                     </Typography>
                     {dataItem.description.map(item => (
-                        <Typography variant="body2" color="textSecondary" component="p" style={{fontFamily:"'Harmattan', sans-serif", fontSize:'1.5em'}}>
+                        <Typography key={item} variant="body2" color="textSecondary" component="p" style={{fontFamily:"'Harmattan', sans-serif", fontSize:'1.5em'}}>
                             {item}
                          </Typography>
 
@@ -69,7 +69,7 @@ const ProjectInfo = ({dataItem}) => {
 
                 <Grid container justify='center' className={classes.grid} style={{background:'black'}}>      
                     {dataItem.skills.map(item => (
-                        <Grid item  className={classes.icongrid} key={item[1]} sm={1} >
+                        <Grid key={item[1]} item  className={classes.icongrid} key={item[1]} sm={1} >
                             <Avatar className={classes.icon} src={item[0]} alt={item[1]} variant='rounded'/>
                         </Grid>
                     ))}

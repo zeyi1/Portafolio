@@ -40,8 +40,8 @@ const Projects = () => {
                 <Grid container spacing={10} className={classes.outergrid} >
                     
                     {projectData.map(data => (
-                        <Grid item sm={12} md={6} lg={4} className={classes.container} >
-                            <ProjectInfo dataItem={data} key={data.title}/>
+                        <Grid item sm={12} md={6} lg={4} className={classes.container} key={data.title}>
+                            <ProjectInfo dataItem={data} />
                         </Grid>
                     ))}
                     

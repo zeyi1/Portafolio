@@ -2,9 +2,9 @@ import React, {useEffect, Suspense, lazy} from 'react';
 import {Avatar, Grid, Typography, Paper} from '@material-ui/core';
 import {makeStyles} from '@material-ui/core/styles';
 import { LocationOn } from '@material-ui/icons';
-// const Aos = lazy(() => import('aos'))
 import Aos from 'aos';
 import 'aos/dist/aos.css';
+
 
 const useStyles = makeStyles(theme => ({
     
@@ -88,10 +88,11 @@ const useStyles = makeStyles(theme => ({
 
 const TimelineItem = ({dataItem}) => {
     useEffect(() => {
-        Aos.init({
-            duration: 2000,
-            offset: 250
-        });
+            Aos.init({
+                duration: 2000,
+                offset: 250
+            });
+            Aos.refresh();
     }, []);
 
     const classes = useStyles();
@@ -101,12 +102,11 @@ const TimelineItem = ({dataItem}) => {
     <Paper style={{overflowX: 'hidden', overflowY: 'hidden'}}>
         <Grid container spacing={3} className={classes.outerGrid} 
               style={{background: `linear-gradient(to top left, rgba(0,0,0,0.3) 0%,rgba(0,0,0,0.5) 100%), url(${dataItem.image}) no-repeat center center fixed`, 
-                      backgroundSize: 'cover',
-                      WebkitBackgroundSize: 'cover',
+                      backgroundSize: 'auto',
+                      WebkitBackgroundSize: 'auto',
                       MozBackgroundSize: 'cover',
                       OBackgroundSize: 'cover',
                       width:'100%', 
-                      height: '100%',
                       margin:0}}
               data-aos='fade-up'>
             <Grid item container md={12} lg={4} justify='center' align='center' className={classes.date}
@@ -148,7 +148,7 @@ const TimelineItem = ({dataItem}) => {
                       data-aos-duration='2500'>
                     <Typography variant='h5' style={{fontFamily: "'Allura', cursive", paddingBottom:'25px', fontWeight:'bold'}}>{dataItem.title}</Typography>
                     {dataItem.description.map(item => (
-                        typeof item == 'string' ? <><Typography variant='subtitle1' align='justify' className={classes.description} key={item} style={{fontFamily:"'Harmattan', sans-serif", fontSize:'20px'}}>{item}</Typography> <br /></>: 
+                        typeof item == 'string' ? <div key={item}><Typography variant='subtitle1' align='justify' className={classes.description} style={{fontFamily:"'Harmattan', sans-serif", fontSize:'20px'}}>{item}</Typography> <br /></div>: 
                         <ul key={item}>
                             {item.map(subitem => (
                                 <li key={subitem}><Typography variant='subtitle1' align='left' className={classes.description} style={{fontFamily:"'Harmattan', sans-serif", fontSize:'20px'}}>{subitem}</Typography></li> 

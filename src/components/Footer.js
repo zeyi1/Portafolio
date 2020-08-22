@@ -5,6 +5,35 @@ import {makeStyles} from '@material-ui/core/styles';
 import {Facebook, GitHub, Instagram, LinkedIn, Mail} from '@material-ui/icons';
 
 
+const data = [
+    {
+        tag: 'Mail',
+        icon: <Mail/>,
+        url: 'mailto:zeyihong@gmail.com'
+    },
+    {
+        tag: 'Facebook',
+        icon: <Facebook/>,
+        url: 'https://www.facebook.com/paul.hong.313/'
+    },
+    {
+        tag: 'Instagram',
+        icon: <Instagram/>,
+        url: 'https://www.instagram.com/paulhongchen/'
+    },
+    {
+        tag: 'LinkedIn',
+        icon: <LinkedIn/>,
+        url: 'https://www.linkedin.com/in/zeyi-hong-chen/'
+    },
+    {
+        tag: 'GitHub',
+        icon: <GitHub />,
+        url: 'https://github.com/zeyi1'
+    }
+]
+
+
 const useStyles = makeStyles(theme =>({
 
     root:{
@@ -79,39 +108,11 @@ const useStyles = makeStyles(theme =>({
 const Footer = () => {
     const classes = useStyles();
 
-    const data = [
-        {
-            tag: 'Mail',
-            icon: <Mail/>,
-            url: 'mailto:zeyihong@gmail.com'
-        },
-        {
-            tag: 'Facebook',
-            icon: <Facebook/>,
-            url: 'https://www.facebook.com/paul.hong.313/'
-        },
-        {
-            tag: 'Instagram',
-            icon: <Instagram/>,
-            url: 'https://www.instagram.com/paulhongchen/'
-        },
-        {
-            tag: 'LinkedIn',
-            icon: <LinkedIn/>,
-            url: 'https://www.linkedin.com/in/zeyi-hong-chen/'
-        },
-        {
-            tag: 'GitHub',
-            icon: <GitHub />,
-            url: 'https://github.com/zeyi1'
-        }
-    ]
-
     return (
         <Box variant='div' className={classes.root}>
             <Grid container spacing={1} className={classes.socials} style={{width:'100%', margin:0}}>
                 {data.map(item =>(
-                    <Avatar className={classes[item.tag]} onClick={event => window.open(item.url, '_blank')}>
+                    <Avatar className={classes[item.tag]} key={item.tag} onClick={event => window.open(item.url, '_blank')}>
                         {item.icon}
                     </Avatar>
                 ))}
