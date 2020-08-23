@@ -1,7 +1,7 @@
 import React from 'react';
 
 import Particles from 'react-tsparticles';
-import shuriken from '../images/shuriken.png'
+import shuriken from '../images/shuriken.svg'
 import {makeStyles} from '@material-ui/core/styles';
 
 

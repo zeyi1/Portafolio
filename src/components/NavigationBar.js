@@ -5,7 +5,7 @@ import MenuIcon from '@material-ui/icons/Menu';
 
 import useMediaQuery from '@material-ui/core/useMediaQuery';
 import {Link} from 'react-scroll';
-import avatar from '../images/avatar.png';
+import avatar from '../images/avatar.svg';
 import {AppBar, Button, Toolbar, ListItem, IconButton, ListItemText, Avatar, Divider, List, Typography, Box, ListItemIcon} from '@material-ui/core';
 import {Home, AssignmentInd, Apps, ContactMail} from '@material-ui/icons';
 import MobilRightMenuSlider from '@material-ui/core/Drawer';

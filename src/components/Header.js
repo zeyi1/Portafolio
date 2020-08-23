@@ -1,7 +1,7 @@
 import React, {useState, lazy, Suspense} from 'react';
 import '../App.css';
 import {Typography, Avatar, Grid, Box, Button} from '@material-ui/core';
-import avatar from '../images/avatar.png';
+import avatar from '../images/avatar.svg';
 import {makeStyles} from '@material-ui/core/styles';
 import isla from '../images/Isla.jpg';
 
