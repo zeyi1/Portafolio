@@ -100,17 +100,25 @@ const Header = () => {
                 <Suspense fallback={<div />}>
                     <Grid container direction='column' className={classes.test}>
                         <Typography className={classes.title} style={{fontFamily: "'Kaushan Script', cursive"}}>
-
-                            <Typed strings={[title]} typeSpeed={40} startDelay={1000} showCursor={false}/>
+                            Hi! I'm Zeyi, a Web / Software Developer.
+                            {/* <Typed strings={[title]} typeSpeed={40} startDelay={1000} showCursor={false}/> */}
                         </Typography>
-                        
-                        {text.map(items => (
+                        <br/>
+                        <br/>
+                        <Typography className={classes.subtitle} style={{fontFamily:"'Harmattan', sans-serif"}}>
+                        I have a passion for creating simplified and optimized software applications that solve real-world problems.
+                        <br/>
+                        I have experience in front-end and back-end design, machine learning and artificial intelligence, and building automated applications.
+                        <br/>
+                        I'm an introvert who loves learning new technologies, games and animes.
+                        </Typography>
+                        {/* {text.map(items => (
                             <Grid item key={items[2]}>
                                 <Typography className={classes.subtitle} style={{fontFamily:"'Harmattan', sans-serif"}}>
                                     <Typed strings={[items[0]]} typeSpeed={30} startDelay={items[1]} showCursor={false}/>
                                 </Typography>
                             </Grid>
-                        ))}
+                        ))} */}
                     </Grid> 
                 </Suspense>
                 
