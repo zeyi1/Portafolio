@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "2faf74662778ec0d47de902c350753bf",
+    "revision": "272cfc8e869935530cca15ebfac45f5f",
     "url": "/Portafolio/index.html"
   },
   {
@@ -8,8 +8,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Portafolio/static/css/9.eb43dee1.chunk.css"
   },
   {
-    "revision": "e0a0c2d85c911a2d5736",
-    "url": "/Portafolio/static/css/main.32ec0bb7.chunk.css"
+    "revision": "8cbfe5b2b3fe328396da",
+    "url": "/Portafolio/static/css/main.83074caf.chunk.css"
   },
   {
     "revision": "3ceb00e7d8693e3ba37a",
@@ -20,16 +20,16 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Portafolio/static/js/10.3e5238f1.chunk.js"
   },
   {
-    "revision": "0cc06cff1ae3fc9d7a8e",
-    "url": "/Portafolio/static/js/11.5520d363.chunk.js"
+    "revision": "fa30ce4615ce4c5f354d",
+    "url": "/Portafolio/static/js/11.659e8222.chunk.js"
   },
   {
     "revision": "8a7036d222b5463da40f",
     "url": "/Portafolio/static/js/12.20b87407.chunk.js"
   },
   {
-    "revision": "040fd72908731d50c447",
-    "url": "/Portafolio/static/js/13.64aa28bf.chunk.js"
+    "revision": "f368f41338e98a2ba453",
+    "url": "/Portafolio/static/js/13.da80fd31.chunk.js"
   },
   {
     "revision": "bece3560faff1851cd30",
@@ -64,12 +64,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Portafolio/static/js/5.a8d2bd8e.chunk.js"
   },
   {
-    "revision": "611b17542c5998fa1629",
-    "url": "/Portafolio/static/js/6.d30eb376.chunk.js"
+    "revision": "059df62cdc4e396373a6",
+    "url": "/Portafolio/static/js/6.4a748b3a.chunk.js"
   },
   {
-    "revision": "4bb49aa5fb1e13f6025e",
-    "url": "/Portafolio/static/js/7.a92531f3.chunk.js"
+    "revision": "3542422e8804f29bf8b1",
+    "url": "/Portafolio/static/js/7.6d4c1e5f.chunk.js"
   },
   {
     "revision": "566112c1bee0c737641d",
@@ -80,32 +80,32 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Portafolio/static/js/9.c151e18e.chunk.js"
   },
   {
-    "revision": "e0a0c2d85c911a2d5736",
-    "url": "/Portafolio/static/js/main.4059717c.chunk.js"
+    "revision": "8cbfe5b2b3fe328396da",
+    "url": "/Portafolio/static/js/main.f8c6b633.chunk.js"
   },
   {
-    "revision": "2902e23a47a266f33352",
-    "url": "/Portafolio/static/js/runtime-main.2c89c62a.js"
+    "revision": "97a14f46849ce624497d",
+    "url": "/Portafolio/static/js/runtime-main.a2f990d2.js"
   },
   {
-    "revision": "209a8dd8f21347f87085cdf21be733f9",
-    "url": "/Portafolio/static/media/Isla.209a8dd8.jpg"
+    "revision": "f8a06c9173152598db5b69d664d3d09b",
+    "url": "/Portafolio/static/media/Isla.f8a06c91.jpg"
   },
   {
-    "revision": "4c669efb196b5c1abd6bb43f3702e758",
-    "url": "/Portafolio/static/media/MSAC_Seal.4c669efb.png"
+    "revision": "d95f83d1490b74288599730c415a28e5",
+    "url": "/Portafolio/static/media/MSAC_Seal.d95f83d1.svg"
   },
   {
-    "revision": "70e12fb7e7168d9f17b30a170c9c5f06",
-    "url": "/Portafolio/static/media/UCSD-Seal.70e12fb7.png"
+    "revision": "e1499920e0595a81b2821d4e4cdc8efa",
+    "url": "/Portafolio/static/media/UCSD-Seal.e1499920.svg"
   },
   {
     "revision": "05499668019d92c05f40a83832884523",
     "url": "/Portafolio/static/media/api.05499668.svg"
   },
   {
-    "revision": "53b45d96e69c522d2207b4d40512fe63",
-    "url": "/Portafolio/static/media/avatar.53b45d96.png"
+    "revision": "2d348767bf95fd85d384682c937ca356",
+    "url": "/Portafolio/static/media/avatar.2d348767.svg"
   },
   {
     "revision": "d80d24293a449e6629a06474f12e890e",
@@ -116,8 +116,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Portafolio/static/media/css-flat.de7fd556.svg"
   },
   {
-    "revision": "d12c8e1bbc7a4e0e2fd2f92404ede90e",
-    "url": "/Portafolio/static/media/dinnerware.d12c8e1b.jpg"
+    "revision": "73f2e83790f34f44976114d0e92fcef2",
+    "url": "/Portafolio/static/media/dinnerware.73f2e837.jpg"
   },
   {
     "revision": "bad33bc673f6ae1fb6e0bb1ca7f47f16",
@@ -128,8 +128,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Portafolio/static/media/excel.5762d131.svg"
   },
   {
-    "revision": "10c88c32c89c15bde99928cd0d73e786",
-    "url": "/Portafolio/static/media/geisel-library.10c88c32.jpg"
+    "revision": "474784e25e8c0b299a790d64b563eb0c",
+    "url": "/Portafolio/static/media/geisel-library.474784e2.jpg"
   },
   {
     "revision": "2ffadb9484395a8d5c4ccc0763b124e1",
@@ -152,8 +152,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Portafolio/static/media/jupyter.9aa5ff93.svg"
   },
   {
-    "revision": "ba38d3abc0b42b22b749bdca9066f030",
-    "url": "/Portafolio/static/media/mtsac-upperwalkway.ba38d3ab.jpg"
+    "revision": "097cff352caa8ce36e8fe68ddc4b34f1",
+    "url": "/Portafolio/static/media/mtsac-upperwalkway.097cff35.jpg"
   },
   {
     "revision": "74c66a7bbb831590fe3c96306fe535f2",
@@ -184,8 +184,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Portafolio/static/media/shopify.f3b75581.svg"
   },
   {
-    "revision": "d0deb711153dc922f4b84c4a71fd3845",
-    "url": "/Portafolio/static/media/shuriken.d0deb711.png"
+    "revision": "2098710ebad2a7532cd4e3d178e9ea40",
+    "url": "/Portafolio/static/media/shuriken.2098710e.svg"
   },
   {
     "revision": "e3049113ab1616ddda1caf3681e5440c",
@@ -196,20 +196,20 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Portafolio/static/media/tuxton.54b5a076.png"
   },
   {
-    "revision": "177206e718c01ab788be18906a96625d",
-    "url": "/Portafolio/static/media/ucsd-scenery.177206e7.jpg"
+    "revision": "eb194ed4019615f13891c5699f183e39",
+    "url": "/Portafolio/static/media/ucsd-scenery.eb194ed4.jpg"
   },
   {
     "revision": "2a95c8e3905b817b8445a8f11a5beecf",
     "url": "/Portafolio/static/media/visualstudio.2a95c8e3.svg"
   },
   {
-    "revision": "a524331aedb08fb549f3b964b2b59e41",
-    "url": "/Portafolio/static/media/warren-logo.a524331a.png"
+    "revision": "a665276f6e9f3ebcbd80c537cdcc9a09",
+    "url": "/Portafolio/static/media/warren-logo.a665276f.svg"
   },
   {
-    "revision": "190553af105f265dcd155ec201c70172",
-    "url": "/Portafolio/static/media/workstation.190553af.jpg"
+    "revision": "a3e93628e90d38ecd404d9b2bf55eb61",
+    "url": "/Portafolio/static/media/workstation.a3e93628.jpg"
   },
   {
     "revision": "ce5bae5dbe04d2237c986a126fcd755a",
