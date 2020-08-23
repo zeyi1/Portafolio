@@ -1,8 +1,11 @@
 import geisel from '../images/geisel-library.jpg';
-import php from '../images/php.png';
-import python from '../images/python.png';
-import pytorch from '../images/react-icon.png';
-import selenium from '../images/selenium.png';
+import php from '../images/php.svg';
+import python from '../images/python.svg';
+import pytorch from '../images/react-icon.svg';
+import selenium from '../images/selenium.svg';
+import eclipse from '../images/eclipse.svg';
+import xcode from '../images/xcodeicon.svg';
+
 
 const projectData = [
     {
@@ -15,7 +18,7 @@ const projectData = [
         'The final accuracy and loss.',
         'Used a library name to scrape and recognize anime faces on Donboori.',
         'Data normalization?'],
-        skills: [[python, 'Python'], [pytorch, 'Pytorch']]
+        skills: [[xcode, 'Python'], [selenium, 'Pytorch'], [pytorch, 'test']]
     },
     {
         image: geisel,

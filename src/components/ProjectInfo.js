@@ -70,7 +70,7 @@ const ProjectInfo = ({dataItem}) => {
                 <Grid container justify='center' className={classes.grid} style={{background:'black'}}>      
                     {dataItem.skills.map(item => (
                         <Grid key={item[1]} item  className={classes.icongrid} key={item[1]} sm={1} >
-                            <Avatar className={classes.icon} src={item[0]} alt={item[1]} variant='rounded'/>
+                            <Avatar className={classes.icon} src={item[0]} alt={item[1]} variant='square'/>
                         </Grid>
                     ))}
                 </Grid>
