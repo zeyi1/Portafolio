@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "29f5eb83d0e974af7eb17cca97004134",
+    "revision": "263290ef0170e56265be69ec38433e64",
     "url": "/Portafolio/index.html"
   },
   {
@@ -8,8 +8,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Portafolio/static/css/9.eb43dee1.chunk.css"
   },
   {
-    "revision": "a681b0476163b73d72da",
-    "url": "/Portafolio/static/css/main.c8adf958.chunk.css"
+    "revision": "fefee6a2ffa4b601afa5",
+    "url": "/Portafolio/static/css/main.891da4f9.chunk.css"
   },
   {
     "revision": "51a15c195601fe728d46",
@@ -76,7 +76,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Portafolio/static/js/9.18d2a692.chunk.js"
   },
   {
-    "revision": "a681b0476163b73d72da",
+    "revision": "fefee6a2ffa4b601afa5",
     "url": "/Portafolio/static/js/main.b1a18896.chunk.js"
   },
   {
@@ -128,6 +128,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Portafolio/static/media/excel.5762d131.svg"
   },
   {
+    "revision": "10c88c32c89c15bde99928cd0d73e786",
+    "url": "/Portafolio/static/media/geisel-library.10c88c32.jpg"
+  },
+  {
     "revision": "2ffadb9484395a8d5c4ccc0763b124e1",
     "url": "/Portafolio/static/media/haskell.2ffadb94.svg"
   },
@@ -150,10 +154,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "2027660f5fd054332a03c7750b7f71d2",
     "url": "/Portafolio/static/media/mobilehero.2027660f.jpg"
-  },
-  {
-    "revision": "1e203da03afd7b9de23b7088b6d7b845",
-    "url": "/Portafolio/static/media/msac.1e203da0.jpg"
   },
   {
     "revision": "097cff352caa8ce36e8fe68ddc4b34f1",
@@ -202,10 +202,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "eb194ed4019615f13891c5699f183e39",
     "url": "/Portafolio/static/media/ucsd-scenery.eb194ed4.jpg"
-  },
-  {
-    "revision": "0a6054423069fd368a2b0b976323d0a4",
-    "url": "/Portafolio/static/media/ucsdmobile.0a605442.jpg"
   },
   {
     "revision": "2a95c8e3905b817b8445a8f11a5beecf",
