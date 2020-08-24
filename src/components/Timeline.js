@@ -2,8 +2,9 @@ import React, {Suspense, lazy} from 'react';
 import experienceData from './experienceData';
 import {Typography} from '@material-ui/core';
 import {makeStyles} from '@material-ui/core/styles';
+import TimelineItem from './TimelineItem'''
 
-const TimelineItem = lazy(() => import('./TimelineItem'))
+// const TimelineItem = lazy(() => import('./TimelineItem'))
 
 
 const useStyles = makeStyles(theme => ({
@@ -29,9 +30,9 @@ const Timeline = () => {
                 </Typography>
                 
                 {experienceData.map(data => (
-                    <Suspense fallback={<div />} key={data.title}>
-                        <TimelineItem dataItem={data} key={data.name} />
-                    </Suspense>
+                    // <Suspense fallback={<div />} key={data.title}>
+                    <TimelineItem dataItem={data} key={data.name} />
+                    // </Suspense>
                 ))}
 
             </div>
