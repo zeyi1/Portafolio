@@ -46,24 +46,26 @@
         backgroundRepeat: 'no-repeat', */
 @media only screen and (max-width: 959px){
   #root > div > div.experience > div:nth-child(2) > div{
-    background-image:linear-gradient(to top left, rgba(0,0,0,0.3) 0%,rgba(0,0,0,0.5) 100%), url('./images/msac.jpg') !important;
-    background-size: cover;
-    min-height: 100%;
+    /* background-image:linear-gradient(to top left, rgba(0,0,0,0.3) 0%,rgba(0,0,0,0.5) 100%), url('./images/msac.jpg') !important; */
+    background-attachment: initial;
     
   }
 
   #root > div > div.experience > div:nth-child(3) > div{
-    background-image:linear-gradient(to top left, rgba(0,0,0,0.3) 0%,rgba(0,0,0,0.5) 100%), url('./images/ucsdmobile.jpg') !important;
-    background-size: contain;
+    background-image:linear-gradient(to top left, rgba(0,0,0,0.3) 0%,rgba(0,0,0,0.5) 100%), url('./images/geisel-library.jpg') !important;
+    /* background-size: contain; */
     background-attachment: initial;
+    /* width: auto; */
+    /* max-width: 100%;  */
     /* width: 100%; */
     /* min-height: 100%; */
   }
 
   #root > div > div.experience > div:nth-child(4) > div{
     background-image:linear-gradient(to top left, rgba(0,0,0,0.3) 0%,rgba(0,0,0,0.5) 100%), url('./images/artisan.jpg') !important;
-    background-size: cover;
-    min-height: 100%;
+    /* background-size: cover;
+    min-height: 100%; */
+    background-attachment: initial;
   }
 }
 
