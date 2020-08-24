@@ -1,4 +1,4 @@
-import geisel from '../images/geisel-library.jpg';
+import geisel from '../images/Isla.jpg';
 import php from '../images/php.svg';
 import python from '../images/python.svg';
 import pytorch from '../images/react-icon.svg';
