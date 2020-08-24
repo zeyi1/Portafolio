@@ -47,7 +47,8 @@ const useStyles = makeStyles(theme => ({
 
     button: {
         margin: '1.5rem 0 3rem 0',
-        color: '#4385f5',
+        // color: '#75A3f2',
+        color : '#a9c9ff',
         borderColor: '#4385f5',
         '&:hover':{
             backgroundColor: '#4385f5',
@@ -102,7 +103,7 @@ const Contact = () => {
                     </Typography>
                     {data.map(item => (
                         <div key={item.id}>
-                            <InputField className={classes.field}
+                            <InputField className={classes.field} id={item.label}
                                 InputProps={{
                                     startAdornment: <InputAdornment position='start'>{item.icon}</InputAdornment>, 
                                     }}
@@ -118,7 +119,7 @@ const Contact = () => {
                         </div>
                     ))}
 
-                    <InputField multiline={true} className={classes.field}
+                    <InputField multiline={true} className={classes.field} id='Message'
                         InputProps={{
                             startAdornment: <InputAdornment position='start' ><ChatBubble /></InputAdornment>, 
                             style: {color: 'black',

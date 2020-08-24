@@ -100,7 +100,7 @@ const useStyles = makeStyles(theme =>({
         margin: '2em 0.75em'
     },
     bottom: {
-        margin: '1em 0px 3em 0px',
+        margin: '1em 0px 1.5em 0px',
     }
 }))
 

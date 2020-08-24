@@ -22,12 +22,20 @@
 
 
 @media only screen and (max-width: 959px){
+  #root > div > div.experience > div:nth-child(2) > div{
+    background:linear-gradient(to top left, rgba(0,0,0,0.3) 0%,rgba(0,0,0,0.5) 100%), url('./images/msac.jpg') no-repeat center center fixed !important;
+  }
+
   #root > div > div.experience > div:nth-child(3) > div{
     
     background:linear-gradient(to top left, rgba(0,0,0,0.3) 0%,rgba(0,0,0,0.5) 100%), url('./images/geisel-library.jpg') no-repeat center center fixed !important;
     background-size: cover !important;
     height: 100% !important;
     overflow: hidden !important;
+  }
+
+  #root > div > div.experience > div:nth-child(4) > div{
+    background:linear-gradient(to top left, rgba(0,0,0,0.3) 0%,rgba(0,0,0,0.5) 100%), url('./images/artisan.jpg') no-repeat center center fixed !important;
   }
 }
 

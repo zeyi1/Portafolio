@@ -3,7 +3,7 @@ import mtsacBackground from '../images/mtsac-upperwalkway.jpg';
 import warren from '../images/warren-logo.svg';
 import ucsd from '../images/UCSD-Seal.svg';
 import ucsdBackground from '../images/ucsd-scenery.jpg';
-import tuxton from '../images/tuxton.png';
+import tuxton from '../images/tuxton.svg';
 import dinnerware from '../images/dinnerware.jpg';
 import api from '../images/api.svg';
 import cpp from '../images/cpp.svg';

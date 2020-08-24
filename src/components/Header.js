@@ -3,6 +3,7 @@ import '../App.css';
 import {Typography, Avatar, Grid, Box, Button} from '@material-ui/core';
 import avatar from '../images/avatar.svg';
 import {makeStyles} from '@material-ui/core/styles';
+import hero from '../images/mobilehero.jpg';
 import isla from '../images/Isla.jpg';
 
 
@@ -18,14 +19,19 @@ const useStyles = makeStyles( theme => ({
     title: {
         fontSize: '30px',
         fontWeight: 'bold',
-        paddingBottom: '30px',
+        paddingBottom: '1em',
         color: '#b5b4df',
         [theme.breakpoints.down('xs')]:{
-            fontSize: '24px'
+            fontSize: '24px',
         }
     },
     test:{
         backgroundColor: 'rgba(0,0,0,0.7)' 
+    },
+    subgrid:{
+        [theme.breakpoints.down('sm')]:{
+            paddingBottom: '5px'
+        }
     },
     subtitle: {
         fontSize: '21px',
@@ -60,6 +66,9 @@ const useStyles = makeStyles( theme => ({
         WebkitBackgroundSize: 'cover',
         OBackgroundSize: 'cover',
         backgroundRepeat: 'no-repeat',
+        [theme.breakpoints.down('xs')]:{
+            backgroundImage:  `linear-gradient(to top left, rgba(0,0,0,0.1) 0%,rgba(0,0,0,0.2) 100%), url(${hero})`
+        }
         
     },
     button:{
@@ -67,10 +76,10 @@ const useStyles = makeStyles( theme => ({
         top: '93vh',
         // backgroundColor: '#abcbfe',
         boxShadow: '0 0 5px 5px rgba(84,131,205, 0.7)',
-        background: '#2C68C6',
+        background: '#518cf2',
         '&:hover':{
             backgroundColor: 'rgba(41,104,238, 0.8)'
-        }
+        },
     },
     
 }))
@@ -81,8 +90,9 @@ const Header = () => {
     const [animation, setAnimation] = useState(false)
     
     const classes = useStyles()
-    
+
     const title = "Hi! I'm Zeyi, a Web / Software Developer."
+
     const text = [["I have a passion for creating simplified and optimized software applications that solve real-world problems.", 4000, '1'],
                   ['I have experience in front-end and back-end design, machine learning and artificial intelligence, and building automated applications.', 9000, '2'],
                   ["I'm an introvert who loves learning new technologies, games and animes.", 15000, '3']]
@@ -99,26 +109,18 @@ const Header = () => {
 
                 <Suspense fallback={<div />}>
                     <Grid container direction='column' className={classes.test}>
+                        
                         <Typography className={classes.title} style={{fontFamily: "'Kaushan Script', cursive"}}>
-                            Hi! I'm Zeyi, a Web / Software Developer.
-                            {/* <Typed strings={[title]} typeSpeed={40} startDelay={1000} showCursor={false}/> */}
+                            <Typed strings={[title]} typeSpeed={40} startDelay={1000} showCursor={false}/>
                         </Typography>
-                        <br/>
-                        <br/>
-                        <Typography className={classes.subtitle} style={{fontFamily:"'Harmattan', sans-serif"}}>
-                        I have a passion for creating simplified and optimized software applications that solve real-world problems.
-                        <br/>
-                        I have experience in front-end and back-end design, machine learning and artificial intelligence, and building automated applications.
-                        <br/>
-                        I'm an introvert who loves learning new technologies, games and animes.
-                        </Typography>
-                        {/* {text.map(items => (
-                            <Grid item key={items[2]}>
+
+                        {text.map(items => (
+                            <Grid item key={items[2]} className={classes.subgrid}>
                                 <Typography className={classes.subtitle} style={{fontFamily:"'Harmattan', sans-serif"}}>
                                     <Typed strings={[items[0]]} typeSpeed={30} startDelay={items[1]} showCursor={false}/>
                                 </Typography>
                             </Grid>
-                        ))} */}
+                        ))}
                     </Grid> 
                 </Suspense>
                 
