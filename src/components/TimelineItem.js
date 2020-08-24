@@ -1,4 +1,4 @@
-import React, {useEffect, Suspense, lazy} from 'react';
+import React, {useEffect} from 'react';
 import {Avatar, Grid, Typography, Paper} from '@material-ui/core';
 import {makeStyles} from '@material-ui/core/styles';
 import { LocationOn } from '@material-ui/icons';
@@ -29,20 +29,16 @@ const useStyles = makeStyles(theme => ({
     outerGrid: {
         justifyContent: 'center',
         alignItems: 'center',
-        // MozBackgroundSize: 'cover',
-        // WebkitBackgroundSize: 'cover',
-        // OBackgroundSize: 'cover',
-        // backgroundSize: 'cover',
-        // backgroundPosition: 'center center',
-        // backgroundAttachment: 'fixed',
-        // backgroundRepeat: 'no-repeat',
+        MozBackgroundSize: 'cover',
+        WebkitBackgroundSize: 'cover',
+        OBackgroundSize: 'cover',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center center',
+        backgroundAttachment: 'fixed',
+        backgroundRepeat: 'no-repeat',
         // height: '100%',
         // overflow: 'hidden'
     },
-
-    // paper:{
-    //     maxWidth: '100vw',
-    // },
 
     text:{
         color: '#F8F0C6',
@@ -90,7 +86,6 @@ const TimelineItem = ({dataItem}) => {
     useEffect(() => {
             Aos.init({
                 duration: 2000,
-                offset: 250
             });
             Aos.refresh();
     }, []);
@@ -101,13 +96,7 @@ const TimelineItem = ({dataItem}) => {
     
     <Paper style={{overflowX: 'hidden', overflowY: 'hidden'}}>
         <Grid container spacing={3} className={classes.outerGrid} 
-              style={{background: `linear-gradient(to top left, rgba(0,0,0,0.3) 0%,rgba(0,0,0,0.5) 100%), url(${dataItem.image}) no-repeat center center fixed`, 
-                      backgroundSize: 'auto',
-                      WebkitBackgroundSize: 'auto',
-                      MozBackgroundSize: 'cover',
-                      OBackgroundSize: 'cover',
-                      width:'100%', 
-                      margin:0}}
+              style={{backgroundImage: `linear-gradient(to top left, rgba(0,0,0,0.3) 0%,rgba(0,0,0,0.5) 100%), url(${dataItem.image})`}}
               data-aos='fade-up'>
             <Grid item container md={12} lg={4} justify='center' align='center' className={classes.date}
                   data-aos='fade-left'>
