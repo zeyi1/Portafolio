@@ -9,9 +9,10 @@ const Contact = lazy(() => import('./components/Contact'));
 const Footer = lazy(() => import('./components/Footer'));
 
 
+
 function App() {
   return (
-    
+   
       <div className='appRoot'>
 
         <Suspense fallback={<div />}>
