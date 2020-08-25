@@ -9,7 +9,7 @@ import projectData from './projectData';
 
 const useStyles = makeStyles(theme => ({
     container:{
-        
+        // background: 'linear-gradient(to top right, #cc2b5e, #753a88)'
     },
     title: {
         textAlign: 'center',
@@ -19,7 +19,8 @@ const useStyles = makeStyles(theme => ({
     },
     outergrid:{
         width: '100%',
-        background: 'black',
+        //background: 'linear-gradient(to top right, rgba(204,43,94,0.3) 0%, rgba(117,58,136,0.8) 100%)',
+        background: 'linear-gradient(to bottom, #fff1eb, #e9defa, #6991c7)',
         justifyContent: 'center',
         margin: 'auto',
 

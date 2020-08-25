@@ -66,10 +66,13 @@ const useStyles = makeStyles(theme => ({
     
     description:{
         color: '#c2a5ae',
+        fontSize: '20px',
         padding: '0 25px',
         [theme.breakpoints.down('sm')]:{
-            textAlign: 'left'
-        }
+            textAlign: 'left',
+            fontSize: '18px'
+        },
+
     },
 
     icon:{
@@ -141,10 +144,10 @@ const TimelineItem = ({dataItem}) => {
                       data-aos-duration='2500'>
                     <Typography variant='h5' style={{fontFamily: "'Allura', cursive", paddingBottom:'25px', fontWeight:'bold'}}>{dataItem.title}</Typography>
                     {dataItem.description.map(item => (
-                        typeof item == 'string' ? <div key={item}><Typography variant='subtitle1' align='justify' className={classes.description} style={{fontFamily:"'Harmattan', sans-serif", fontSize:'20px'}}>{item}</Typography> <br /></div>: 
+                        typeof item == 'string' ? <div key={item}><Typography variant='subtitle1' align='justify' className={classes.description} style={{fontFamily:"'Harmattan', sans-serif"}}>{item}</Typography> <br /></div>: 
                         <ul key={item}>
                             {item.map(subitem => (
-                                <li key={subitem}><Typography variant='subtitle1' align='left' className={classes.description} style={{fontFamily:"'Harmattan', sans-serif", fontSize:'20px'}}>{subitem}</Typography></li> 
+                                <li key={subitem}><Typography variant='subtitle1' align='left' className={classes.description} style={{fontFamily:"'Harmattan', sans-serif"}}>{subitem}</Typography></li> 
                             ))}
                         </ul>
                     ))}

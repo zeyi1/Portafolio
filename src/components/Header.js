@@ -5,7 +5,6 @@ import avatar from '../images/avatar.svg';
 import {makeStyles} from '@material-ui/core/styles';
 import hero from '../images/mobilehero.jpg';
 import isla from '../images/Isla.jpg';
-import Orientation from './Orientation';
 
 const Particle = lazy(() => import('./Particle'))
 const Typed = lazy(() => import('react-typed'))
@@ -14,7 +13,8 @@ const useStyles = makeStyles( theme => ({
     avatar: {
         width: theme.spacing(15),
         height: theme.spacing(15),
-        margin: theme.spacing(1)
+        margin: 'auto',
+        
     },
     title: {
         fontSize: '30px',
@@ -76,7 +76,6 @@ const useStyles = makeStyles( theme => ({
         zIndex: 1,
         position: 'absolute',
         bottom: 10,
-        // backgroundColor: '#abcbfe',
         boxShadow: '0 0 5px 5px rgba(84,131,205, 0.7)',
         background: '#518cf2',
         '&:hover':{
@@ -97,7 +96,7 @@ function isMobile(){
 
 const Header = () => {
     const mobile = isMobile()
-    // const orientation = Orientation()
+
     const [animation, setAnimation] = useState(false)
     
     const classes = useStyles()
@@ -111,16 +110,16 @@ const Header = () => {
 
     return (
 
-       // mobile && (orientation === 'landscape-primary') ? (
            mobile ? (
             <Box className={classes.backImage} id='about'>
+                <Suspense fallback={<div />}>
                 <Box className={classes.typedContainer}>
-                    <Grid container align='center'>
-                        <Grid item container sm={3} justify='center' direction='column'>
+                    <Grid container align='center' >
+                        <Grid item container sm={3} direction='column' style={{paddingBottom: '20px'}}>
                             <Avatar className={classes.avatar} src = {avatar} alt='Sharingan One Tomoe'/>
                         </Grid>
 
-                        <Suspense fallback={<div />}>
+                        
                             <Grid item container sm={9} direction='column' className={classes.test}>
                                 
                                 <Typography className={classes.title} style={{fontFamily: "'Kaushan Script', cursive"}}>
@@ -135,9 +134,10 @@ const Header = () => {
                                     </Grid>
                                 ))}
                             </Grid> 
-                        </Suspense>
+                        
                     </Grid>
                 </Box>
+                </Suspense>
                 <Suspense fallback={<div />}>
                     <Grid container justify='center'>
                         <Button className={classes.button} style={{fontFamily: "'Caveat', cursive"}} onClick={() => setAnimation(!animation)}>Animate</Button>
