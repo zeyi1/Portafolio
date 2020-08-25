@@ -111,40 +111,41 @@ const Header = () => {
 
     return (
 
-        // mobile && (orientation === 'landscape-primary') ? (
-        //     <Box className={classes.backImage} id='about'>
-        //         <Box className={classes.typedContainer}>
-        //             <Grid container align='center'>
-        //                 <Grid item container sm={3} justify='center' direction='column'>
-        //                     <Avatar className={classes.avatar} src = {avatar} alt='Sharingan One Tomoe'/>
-        //                 </Grid>
+       // mobile && (orientation === 'landscape-primary') ? (
+           mobile ? (
+            <Box className={classes.backImage} id='about'>
+                <Box className={classes.typedContainer}>
+                    <Grid container align='center'>
+                        <Grid item container sm={3} justify='center' direction='column'>
+                            <Avatar className={classes.avatar} src = {avatar} alt='Sharingan One Tomoe'/>
+                        </Grid>
 
-        //                 <Suspense fallback={<div />}>
-        //                     <Grid item container sm={9} direction='column' className={classes.test}>
+                        <Suspense fallback={<div />}>
+                            <Grid item container sm={9} direction='column' className={classes.test}>
                                 
-        //                         <Typography className={classes.title} style={{fontFamily: "'Kaushan Script', cursive"}}>
-        //                             <Typed strings={[title]} typeSpeed={40} startDelay={1000} showCursor={false}/>
-        //                         </Typography>
+                                <Typography className={classes.title} style={{fontFamily: "'Kaushan Script', cursive"}}>
+                                    <Typed strings={[title]} typeSpeed={40} startDelay={1000} showCursor={false}/>
+                                </Typography>
 
-        //                         {text.map(items => (
-        //                             <Grid item key={items[2]} className={classes.subgrid}>
-        //                                 <Typography className={classes.subtitle} style={{fontFamily:"'Harmattan', sans-serif"}}>
-        //                                     <Typed strings={[items[0]]} typeSpeed={30} startDelay={items[1]} showCursor={false}/>
-        //                                 </Typography>
-        //                             </Grid>
-        //                         ))}
-        //                     </Grid> 
-        //                 </Suspense>
-        //             </Grid>
-        //         </Box>
-        //         <Suspense fallback={<div />}>
-        //             <Grid container justify='center'>
-        //                 <Button className={classes.button} style={{fontFamily: "'Caveat', cursive"}} onClick={() => setAnimation(!animation)}>Animate</Button>
-        //                 {animation ? <Particle /> : null}
-        //             </Grid>
-        //         </Suspense>
-        //     </Box>
-        // ) : (
+                                {text.map(items => (
+                                    <Grid item key={items[2]} className={classes.subgrid}>
+                                        <Typography className={classes.subtitle} style={{fontFamily:"'Harmattan', sans-serif"}}>
+                                            <Typed strings={[items[0]]} typeSpeed={30} startDelay={items[1]} showCursor={false}/>
+                                        </Typography>
+                                    </Grid>
+                                ))}
+                            </Grid> 
+                        </Suspense>
+                    </Grid>
+                </Box>
+                <Suspense fallback={<div />}>
+                    <Grid container justify='center'>
+                        <Button className={classes.button} style={{fontFamily: "'Caveat', cursive"}} onClick={() => setAnimation(!animation)}>Animate</Button>
+                        {animation ? <Particle /> : null}
+                    </Grid>
+                </Suspense>
+            </Box>
+        ) : (
             <Box className={classes.backImage} id='about'>
                 
                 <Box className={classes.typedContainer}>
@@ -179,7 +180,7 @@ const Header = () => {
                 </Suspense>
                 
             </Box>
-    //    ) 
+       ) 
 
     );
 }
