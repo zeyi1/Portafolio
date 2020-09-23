@@ -1,8 +1,12 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Portafolio App",
+  "name": "Portafolio App PWA",
   "icons": [
-    
+    {
+      "src": "/images/logo.png",
+      "type": "image/png",
+      "sizes": "300x300"
+    }
   ],
   "start_url": ".",
   "display": "standalone",
