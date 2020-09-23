@@ -13,6 +13,7 @@ const useStyles = makeStyles(theme => ({
     card: {
         // maxWidth: '100%',
         border: '2px solid red',
+        background: 'transparent'
     },
     
     cardActions:{

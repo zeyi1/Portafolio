@@ -20,7 +20,7 @@ const Particle = () => {
             className={classes.tsparticles}
             options={{
             
-            fpsLimit: 240,
+            fpsLimit: 120,
             interactivity: {
                 detectsOn: "canvas",
                 events: {
@@ -114,7 +114,7 @@ const Particle = () => {
                         enable: true,
                         area: 1500
                     },
-                    limit: 50,
+                    limit: 25,
                 },
                 opacity: {
                     animation: {

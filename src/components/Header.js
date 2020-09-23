@@ -76,6 +76,7 @@ const useStyles = makeStyles( theme => ({
         zIndex: 1,
         position: 'absolute',
         bottom: 10,
+        borderRadius: 5,
         boxShadow: '0 0 5px 5px rgba(84,131,205, 0.7)',
         background: '#518cf2',
         '&:hover':{

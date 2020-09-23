@@ -12,7 +12,6 @@ const Footer = lazy(() => import('./components/Footer'));
 
 function App() {
   return (
-   
       <div className='appRoot'>
 
         <Suspense fallback={<div />}>
@@ -35,8 +34,9 @@ function App() {
         
         <Suspense fallback={<div />}>
           <Footer />
-        </Suspense>
-        
+        </Suspense> 
+
+        {/* <Message/> */}
       </div>
 
   );

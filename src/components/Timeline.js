@@ -1,7 +1,7 @@
 import React, {Suspense, lazy} from 'react';
-import experienceData from './experienceData';
 import {Typography} from '@material-ui/core';
 import {makeStyles} from '@material-ui/core/styles';
+import experienceData from '../data/experienceData';
 
 const TimelineItem = lazy(() => import('./TimelineItem'))
 
