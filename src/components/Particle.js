@@ -5,15 +5,15 @@ import shuriken from '../images/shuriken.png'
 import {makeStyles} from '@material-ui/core/styles';
 
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles({
     tsparticles:{
         top: 0,
         minHeight: '100vh'
     }
-}))
+});
 
 const Particle = () => {
-    const classes = useStyles()
+    const classes = useStyles();
 
     return (
         <Particles
@@ -156,6 +156,6 @@ const Particle = () => {
             }}
         />
     )
-}
+};
 
 export default Particle;

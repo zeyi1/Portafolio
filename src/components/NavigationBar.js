@@ -3,10 +3,12 @@ import {motion} from 'framer-motion';
 import {Link} from 'react-scroll';
 import {useScrollPosition} from '@n8tb1t/use-scroll-position';
 import {makeStyles, useTheme} from '@material-ui/core/styles';
-import {AppBar, Button, Toolbar, ListItem, IconButton, ListItemText, Avatar, Divider, Typography, ListItemIcon} from '@material-ui/core';
+import {AppBar, Button, Toolbar, ListItem, IconButton, ListItemText, Grid, Typography, ListItemIcon} from '@material-ui/core';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
 import MenuIcon from '@material-ui/icons/Menu';
-import avatar from '../images/avatar.svg';
+import bear from '../images/bear.png';
+import blackKhoi from '../images/black_khoi.png';
+import whiteKhoi from '../images/white_khoi.png';
 import navigationData from '../data/navigationData';
 
 const Modal = lazy(() => import('./Modal'));
@@ -18,13 +20,10 @@ const useStyles = makeStyles(theme => ({
     },
     items: {
         justifyContent: 'center',
-        // [theme.breakpoints.down('xs')]:{
-        //     justifyContent: 'flex-end'
-        // }   
     },
     buttons: {
         marginLeft: theme.spacing(3),
-        backgroundImage: 'radial-gradient( rgba(243,197,182,0.7), rgba(210,181,205,0.7),rgba(181,179,223,0.7), rgba(204,186,218,0.7))',
+        backgroundImage: 'radial-gradient(circle at bottom right, rgba(243,197,182,0.7), rgba(210,181,205,0.7),rgba(181,179,223,0.7), rgba(204,186,218,0.7))',
         color: '#483b5a',
         boxShadow: '0 0 3px 3px rgba(171,203,254,0.6)',
         '&:hover': {
@@ -41,50 +40,38 @@ const useStylesMobile = makeStyles(theme => ({
         height: theme.spacing(13),
     },
     listItem: {
-        minWidth:'40%',
-        color: '#6b0015',
-        justifyContent: 'flex-end',
-        // flex: 1,
+        color: '#fadadd',
+        justifyContent: 'center',
     },
     listItem2:{
-        width: '50%',
-        textAlign: 'left',
-        paddingLeft: '20px'
+        textAlign: 'center',
+    },
+    images: {
+        display: 'block',
+        margin: 'auto'
     }
 }))
 
 const outerList = {
+    hidden: {},
     visible: {
         opacity:1,
         transition: {
-          delayChildren: 0.2,
-          staggerChildren: 0.07
+          delayChildren: 1.5,
+          staggerChildren: 0.13
         }
-      },
-    hidden: {
-        opacity:0,
-    transition: {
-        staggerChildren: 0.05,
-        staggerDirection: -1
-    }
-    }
+      }
 }
 
 const listElement = {
+    hidden: {y: 250},
     visible: {
         y: 0,
-        opacity: 1,
         transition: {
-          y: { stiffness: 1000, velocity: -100 }
+            ease:'easeInOut',
+            duration:0.55
         }
-      },
-    hidden: {
-    y: 50,
-    opacity: 0,
-    transition: {
-        y: { stiffness: 1000 }
-    }
-    }
+      }
 }
 
 
@@ -126,7 +113,7 @@ function NavigationBar() {
     const theme = useTheme();
     const isMobile = useMediaQuery(theme.breakpoints.down('xs'));
     
-
+    
     return (
         <>
         <AppBar position="fixed" className={classes.bar} style={{...headerStyle}}>
@@ -144,14 +131,20 @@ function NavigationBar() {
 
                 <Suspense fallback={<div />}>
                     <Modal ref={modalRef}>
-                        <Avatar className={classesMobile.avatar} src={avatar} alt="Sharingan One Tomoe" />
-                        <Divider />
-                        <motion.div variants={outerList}
+                        <img src={bear} alt="bear" className={classesMobile.images} />
+                        
+                        <Grid container style={{width:"100vw", borderTop: '2px solid black'}} alignItems='center'>
+                            <Grid item xs={3}>
+                                <img src={whiteKhoi} alt="whiteKhoi" className={classesMobile.images} />
+                            </Grid>
+                            <Grid item xs={6}>
+                             <motion.div variants={outerList}
                             initial="hidden"
                             animate="visible"
                             exit="hidden">
+
                             {navigationData.map(item => (
-                                <motion.div variants={listElement} key={item.id}>
+                                <motion.div variants={listElement} key={item.id} >
                                     <Link 
                                     activeClass="active"
                                     to={item.linkName}
@@ -170,6 +163,12 @@ function NavigationBar() {
                                 </motion.div>
                             ))}
                         </motion.div>
+                        </Grid>
+                        <Grid item xs={3}>
+                            <img src={blackKhoi} alt="blackKhoi" className={classesMobile.images} />
+                        </Grid>
+                        </Grid>
+                       
                     </Modal>
                 </Suspense>
                 </>

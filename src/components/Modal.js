@@ -4,22 +4,22 @@ import {AnimatePresence, motion} from 'framer-motion';
 
 const backdrop = {
     hidden: {
-        opacity: 0
+        opacity: 0,
     },
     visible: {
-        opacity: 1
+        opacity: 1,
     },
 }
 
 const modal = {
     hidden: {
-        y: 1800,
-        // opacity: 0
+        y: 360,
     },
     visible: {
         y: 0,
-        // opacity: 1,
-        transition: {delay:2, ease: 'easeInOut' }
+        transition: {duration:1.5, ease: 'easeInOut', when:'beforeChildren', delayChildren: 3,
+            staggerChildren: 2
+         }
     }
 }
 
@@ -42,18 +42,22 @@ const Modal = forwardRef(
         const close = () => {
             setDisplay(false);
         };
+        
 
         if (display) {
             return ReactDOM.createPortal(
                 <div className="modal-wrapper">
-                    <AnimatePresence exitBeforeEnter>
+                    <AnimatePresence>
                         <motion.div className="backdrop" key="backdrop" onClick={close} 
                             variants={backdrop}
                             initial="hidden"
                             animate="visible"
                             exit="hidden"/>
 
-                        <motion.div className="modal" key="modal" variants={modal}>
+                        <motion.div className="modal" key="modal" variants={modal}
+                        initial="hidden"
+                        animate="visible"
+                        exit="hidden">
                             {props.children}
                         </motion.div>
                     </AnimatePresence>

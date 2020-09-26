@@ -2,6 +2,7 @@ import React, {Suspense, lazy} from 'react';
 import './App.css';
 import Header from './components/Header';
 
+
 const NavigationBar = lazy(() => import('./components/NavigationBar'));
 const Timeline = lazy(() => import('./components/Timeline'));
 const Projects = lazy(() => import('./components/Projects'));
@@ -34,9 +35,10 @@ function App() {
         
         <Suspense fallback={<div />}>
           <Footer />
-        </Suspense> 
+        </Suspense>  
 
-        {/* <Message/> */}
+        {/* <Message/>*/}
+        
       </div>
 
   );

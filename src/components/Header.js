@@ -1,7 +1,7 @@
 import React, {useState, lazy, Suspense} from 'react';
 import '../App.css';
 import {Typography, Avatar, Grid, Box, Button} from '@material-ui/core';
-import avatar from '../images/avatar.svg';
+import profile from '../images/profile.jpg';
 import {makeStyles} from '@material-ui/core/styles';
 import hero from '../images/mobilehero.jpg';
 import isla from '../images/Isla.jpg';
@@ -11,9 +11,13 @@ const Typed = lazy(() => import('react-typed'))
 
 const useStyles = makeStyles( theme => ({
     avatar: {
-        width: theme.spacing(15),
-        height: theme.spacing(15),
+        width: theme.spacing(30),
+        height: theme.spacing(30),
         margin: 'auto',
+        [theme.breakpoints.down('sm')]:{
+            width: theme.spacing(20),
+            height: theme.spacing(20),
+        }
         
     },
     title: {
@@ -115,26 +119,25 @@ const Header = () => {
             <Box className={classes.backImage} id='about'>
                 <Suspense fallback={<div />}>
                 <Box className={classes.typedContainer}>
-                    <Grid container align='center' >
+                    <Grid container align='center'>
                         <Grid item container sm={3} direction='column' style={{paddingBottom: '20px'}}>
-                            <Avatar className={classes.avatar} src = {avatar} alt='Sharingan One Tomoe'/>
+                            <Avatar className={classes.avatar} src={profile} alt='Me'/>
                         </Grid>
-
                         
-                            <Grid item container sm={9} direction='column' className={classes.test}>
-                                
-                                <Typography className={classes.title} style={{fontFamily: "'Kaushan Script', cursive"}}>
-                                    <Typed strings={[title]} typeSpeed={40} startDelay={1000} showCursor={false}/>
-                                </Typography>
+                        <Grid item container sm={9} direction='column' className={classes.test}>
+                            
+                            <Typography className={classes.title} style={{fontFamily: "'Kaushan Script', cursive"}}>
+                                <Typed strings={[title]} typeSpeed={40} startDelay={1000} showCursor={false}/>
+                            </Typography>
 
-                                {text.map(items => (
-                                    <Grid item key={items[2]} className={classes.subgrid}>
-                                        <Typography className={classes.subtitle} style={{fontFamily:"'Harmattan', sans-serif"}}>
-                                            <Typed strings={[items[0]]} typeSpeed={30} startDelay={items[1]} showCursor={false}/>
-                                        </Typography>
-                                    </Grid>
-                                ))}
-                            </Grid> 
+                            {text.map(items => (
+                                <Grid item key={items[2]} className={classes.subgrid}>
+                                    <Typography className={classes.subtitle} style={{fontFamily:"'Harmattan', sans-serif"}}>
+                                        <Typed strings={[items[0]]} typeSpeed={30} startDelay={items[1]} showCursor={false}/>
+                                    </Typography>
+                                </Grid>
+                            ))}
+                        </Grid> 
                         
                     </Grid>
                 </Box>
@@ -152,7 +155,7 @@ const Header = () => {
                 <Box className={classes.typedContainer}>
 
                     <Grid container justify='center' style={{paddingBottom: '40px'}}>
-                        <Avatar className={classes.avatar} src = {avatar} alt='Sharingan One Tomoe'/>
+                        <Avatar className={classes.avatar} src={profile} alt='Me'/>
                     </Grid>
 
                     <Suspense fallback={<div />}>

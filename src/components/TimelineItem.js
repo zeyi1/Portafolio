@@ -39,8 +39,6 @@ const useStyles = makeStyles(theme => ({
         backgroundPosition: 'center center',
         backgroundAttachment: 'fixed',
         backgroundRepeat: 'no-repeat',
-        // height: '100%',
-        // overflow: 'hidden'
     },
 
     text:{
@@ -49,7 +47,6 @@ const useStyles = makeStyles(theme => ({
 
     titleBackground:{
         backgroundColor: 'rgba(0,0,0,0.5)',
-        
     },
 
     text2:{
@@ -72,7 +69,6 @@ const useStyles = makeStyles(theme => ({
             textAlign: 'left',
             fontSize: '18px'
         },
-
     },
 
     icon:{
@@ -85,7 +81,6 @@ const useStyles = makeStyles(theme => ({
             padding: '10px 10px'
         }
     },
-
 }));
 
 
@@ -164,7 +159,6 @@ const TimelineItem = ({dataItem}) => {
         </Grid>
     </Paper>
     )
-        
 };
 
 

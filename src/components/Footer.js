@@ -6,7 +6,7 @@ import {makeStyles} from '@material-ui/core/styles';
 import contactData from '../data/contactData';
 
 
-const useStyles = makeStyles(theme =>({
+const useStyles = makeStyles({
 
     root:{
         left:0,
@@ -74,7 +74,7 @@ const useStyles = makeStyles(theme =>({
     bottom: {
         margin: '1em 0px 1.5em 0px',
     }
-}))
+});
 
 
 const Footer = () => {
@@ -93,7 +93,6 @@ const Footer = () => {
             <Divider/>
             <Typography className={classes.bottom} style={{fontFamily:"'Tangerine', cursive"}}>&copy; {new Date().getFullYear()} Zeyi Hong Chen</Typography>
         </Box>
-
     );
 };
 

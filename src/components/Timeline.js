@@ -6,14 +6,13 @@ import experienceData from '../data/experienceData';
 const TimelineItem = lazy(() => import('./TimelineItem'))
 
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles({
     title: {
         textAlign: 'center',
         fontSize: '2em',
         paddingBottom: '1em'
-    },
-
-}))
+    }
+})
 
 
 const Timeline = () => {
@@ -33,10 +32,8 @@ const Timeline = () => {
                         <TimelineItem dataItem={data} key={data.name} />
                     </Suspense>
                 ))}
-
             </div>
             ))
-    
 }
 
 export default Timeline

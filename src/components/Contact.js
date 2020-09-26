@@ -16,7 +16,6 @@ const useStyles = makeStyles({
     root:{
         position: 'relative',
         paddingTop: '35px',
-        // minHeight: '60vh'
     },
     title:{
         textAlign: 'center',
@@ -31,7 +30,6 @@ const useStyles = makeStyles({
     },
     button: {
         margin: '1.5rem 0 3rem 0',
-        // color: '#75A3f2',
         color : '#a9c9ff',
         borderColor: '#4385f5',
         '&:hover':{
