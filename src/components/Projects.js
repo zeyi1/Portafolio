@@ -7,14 +7,18 @@ import ProjectInfo from './ProjectInfo';
 import projectData from '../data/projectData';
 
 
+
 const useStyles = makeStyles(theme => ({
     container:{
         background: 'linear-gradient(to bottom, rgba(255,241,235,0.5) 0%,rgba(233,222,250,0.5) 50%, rgba(105,145,199,0.5) 100%)'
+        
     },
     title: {
         textAlign: 'center',
         fontSize: '2em',
-        paddingBottom: '1em',
+        // paddingBottom: '1em',
+        paddingTop: '1em',
+        background: `linear-gradient(to top, #fff1eb, #e9defa, #6991c7)`
 
     },
     outergrid:{

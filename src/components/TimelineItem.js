@@ -17,7 +17,7 @@ const useStyles = makeStyles(theme => ({
     date:{
         border: '1px solid black',
         backgroundImage: 'radial-gradient(rgba(255,236,158,0.7), rgba(255,221,138,0.7), rgba(225,173,109,0.7), rgba(201,145,87,0.7), rgba(210,170,119,0.7))',
-        maxWidth: '283px',
+        maxWidth: '310px',
         minHeight: '75px',
         [theme.breakpoints.down('md')]:{
             marginTop: '20px'

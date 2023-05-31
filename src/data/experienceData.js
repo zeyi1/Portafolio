@@ -25,6 +25,13 @@ import postgresql from '../images/postgresql.svg';
 import visualstudio from '../images/visualstudio.svg';
 import shopify from '../images/shopify.svg';
 import photoshop from '../images/photoshop.svg';
+import uci from '../images/uci-logo.svg';
+import uciBackground from '../images/uci-background.jpg';
+import pytorch from '../images/pytorch.svg';
+import terminal from '../images/terminal.svg';
+import spring from '../images/spring.svg';
+import intellij from '../images/IntelliJ.svg';
+
 
 const experienceData = [
     {
@@ -54,7 +61,7 @@ const experienceData = [
     {
         name: 'Tuxton China Inc.',
         logo: [tuxton],
-        year: 'August 2018',
+        year: 'August 2018 - May 2021',
         icons: [[python, 'Python', 'circle'], [selenium, 'Selenium', 'square'], [api, 'API', 'circle'], [jupyter, 'Jupyter', 'square'], [javascript, 'JavaScript', 'square'], [htmlicon, 'HTML', 'square'], [cssicon, 'CSS', 'square'], 
                 [php, 'PHP', 'square'], [shopify, 'Shopify', 'circle'], [excel, 'Excel', 'circle'], [photoshop, 'Photoshop', 'square']],
         image: dinnerware,
@@ -64,6 +71,19 @@ const experienceData = [
                       "During my second year, I worked as a Software Developer. I designed and deployed an automated inventory management system, which accesses both PIM Plytix and Shopify APIs to update the company's inventory reflected on daily basis sales orders.",
                       "I learnt various technologies in order to develop programs that could help automate and simplify coworkers' daily repetitive tasks.",
                       "I effectively reduced coworkers' workload and highly improved company's efficiency and throughput."]
+    },
+    {
+        name: 'University of California, Irvine',
+        logo: [uci],
+        year: 'September 2021 - December 2022',
+        icons: [[python, 'Python', 'circle'], [jupyter, 'Jupyter', 'square'], [pytorch, 'PyTorch', 'circle'], [cpp, 'C++', 'circle'], [terminal, 'Terminal', 'square'], [postgresql, 'PostgreSQL', 'square'], [sql, 'SQL', 'circle'], [javascript, 'JavaScript', 'square'], 
+                [reacticon, 'React', 'circle'], [visualstudio, 'Visual Studio', 'circle'], [spring, 'Spring Boot', 'circle'], [intellij, "IntelliJ IDEA", 'square']],
+        image: uciBackground,
+        location: 'Irvine, CA',
+        title: "Master of Computer Science",
+        description: ['Master of Computer Science (MCS) is a professionally fast paced oriented degree that spans across fifteen months. Every course have a project component that emphasizes a hands-on learning environment, with strong emphasis on practical applications and implementation.', 
+                    'Courses include:',
+                    ['Data Structures and Algorithms with Applications', 'Advance Programming and Problem Solving', 'Optimization Modeling', 'Deep Learning', 'Machine Learning and Data Mining', 'Operating Systems', 'Computer Systems Architecture', 'Databases and Data Management']]
     }
     
 

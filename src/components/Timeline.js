@@ -10,7 +10,11 @@ const useStyles = makeStyles({
     title: {
         textAlign: 'center',
         fontSize: '2em',
-        paddingBottom: '1em'
+        paddingTop: '1em',
+        paddingBottom: '1em',
+        // background: 'linear-gradient(to bottom, #141E32 20%, #262A45 50%, #3D3E5A 100%)'
+        // background: 'linear-gradient(to bottom, #4E4C60, #3D3E5A, #2E354E, #262A45, #1A1A1F)'
+        background: 'linear-gradient(to bottom, #222026, #4E4C60, #5D5C6C, #262A45)'
     }
 })
 

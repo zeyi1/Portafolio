@@ -4,7 +4,7 @@ import {Typography, Avatar, Grid, Box, Button} from '@material-ui/core';
 import profile from '../images/profile.jpg';
 import {makeStyles} from '@material-ui/core/styles';
 import hero from '../images/mobilehero.jpg';
-import isla from '../images/Isla.jpg';
+import xiao from '../images/Xiao.png';
 
 const Particle = lazy(() => import('./Particle'))
 const Typed = lazy(() => import('react-typed'))
@@ -63,7 +63,7 @@ const useStyles = makeStyles( theme => ({
     },
 
     backImage: {
-        backgroundImage: `linear-gradient(to top left, rgba(0,0,0,0.1) 0%,rgba(0,0,0,0.2) 100%), url(${isla})`,
+        backgroundImage: `linear-gradient(to top left, rgba(0,0,0,0.1) 0%,rgba(0,0,0,0.3) 100%), url(${xiao})`,
         width: '100%',
         height: '100vh',
         backgroundPosition: 'center',
