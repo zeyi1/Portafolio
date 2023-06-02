@@ -4,6 +4,7 @@
   "private": true,
   "homepage": "https://zeyi1.github.io/Portafolio/",
   "dependencies": {
+    "@babel/runtime": "^7.22.3",
     "@emotion/react": "^11.11.0",
     "@emotion/styled": "^11.11.0",
     "@material-ui/core": "^4.11.0",
@@ -11,7 +12,7 @@
     "@material-ui/styles": "^4.10.0",
     "@mui/material": "^5.13.3",
     "@n8tb1t/use-scroll-position": "^1.0.43",
-    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
     "aos": "^3.0.0-beta.6",
@@ -19,10 +20,10 @@
     "framer-motion": "^2.6.13",
     "react": "^18.2.0",
     "react-dimensions": "^1.3.1",
-    "react-dom": "^16.13.1",
+    "react-dom": "^18.2.0",
     "react-intersection-observer": "^8.28.5",
     "react-router-dom": "^5.2.0",
-    "react-scripts": "^3.4.1",
+    "react-scripts": "^5.0.1",
     "react-scroll": "^1.8.0",
     "react-tsparticles": "^1.17.5",
     "react-typed": "^1.2.0"
@@ -51,7 +52,7 @@
     ]
   },
   "devDependencies": {
-    "@svgr/cli": "^5.4.0",
+    "@svgr/cli": "^8.0.1",
     "gh-pages": "^3.1.0"
   }
 }

@@ -41,9 +41,9 @@
   position: absolute;
 }
 
-.experience {
-  /* padding-top: 35px; */
-}
+/* .experience {
+  padding-top: 35px;
+} */
 
 #contact::after{
   content: "";
